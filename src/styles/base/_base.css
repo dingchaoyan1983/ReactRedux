@@ -1,0 +1,51 @@
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'proxima_nova_regular', 'Helvetica', 'Arial', sans-serif;
+
+  > .ember-view {
+    height: 100vh;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.membership-application {
+  @mixin font__proxima-nova-regular;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $color_picton-blue;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @mixin font__proxima-nova-regular;
+  font-weight: 400;
+}
+
+strong {
+  @mixin font__proxima-nova-semibold;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.6;
+}

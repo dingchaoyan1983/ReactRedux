@@ -1,0 +1,20 @@
+$title_bar_height: 75px;
+.title-bar {
+  width: 100%;
+  height: $title_bar_height;
+  text-align: center;
+}
+
+.logout {
+  position: relative;
+  top: 30px;
+  right: 15px;
+  float: right;
+}
+
+.title-text {
+  font-family: 'proxima_nova_light', 'Helvetica', 'Arial', sans-serif;
+  margin: 0;
+  font-size: 1.65rem;
+  line-height: 77px;
+}

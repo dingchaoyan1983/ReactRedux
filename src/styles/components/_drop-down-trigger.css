@@ -1,0 +1,26 @@
+.dropdown-trigger {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #748288;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid #b3bdc1;
+    border-radius: 25px;
+}
+
+.dropdown-trigger__title {
+  margin: 0;
+
+  &::after {
+    @extend .icn-font;
+    content: '\e646';
+    vertical-align: middle;
+  }
+
+  &.dropdown-trigger__title--expanded {
+    &::after {
+      content: '\e64c';
+    }
+  }
+}

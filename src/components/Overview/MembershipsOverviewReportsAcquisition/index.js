@@ -1,0 +1,2 @@
+import MembershipsOverviewReportsAcquisition from './MembershipsOverviewReportsAcquisition'
+export default MembershipsOverviewReportsAcquisition

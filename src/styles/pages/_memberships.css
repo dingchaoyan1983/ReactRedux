@@ -1,0 +1,11 @@
+.memberships-application__main {
+  height: calc(100% - $title-bar-height - $nav-bar-height);
+}
+
+.memberships-loading__main {
+  position: absolute;
+  top: calc($title-bar-height + $nav-bar-height);
+  right: 0;
+  bottom: 0;
+  left:0;
+}

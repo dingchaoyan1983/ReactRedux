@@ -1,0 +1,35 @@
+.expanded-content {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  z-index: 9200;
+  min-width: 150px;
+  background-color: #fff;
+  border: 2px solid #d7d8db;
+  border-radius: 5px;
+}
+
+.arrow-up::before {
+  position: absolute;
+  top: -10px;
+  right: 24px;
+  z-index: 0;
+  width: 0;
+  height: 0;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid $color_ghost;
+  border-left: 9px solid transparent;
+  content: '';
+}
+
+.arrow-up::after {
+  position: absolute;
+  top: -7px;
+  right: 26px;
+  width: 0;
+  height: 0;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid $color_white;
+  border-left: 7px solid transparent;
+  content: '';
+}

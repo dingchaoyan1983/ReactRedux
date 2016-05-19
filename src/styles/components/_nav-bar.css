@@ -1,0 +1,43 @@
+$nav_bar_height: 68px;
+
+.nav-bar {
+  height: $nav_bar_height;
+  letter-spacing: 0.6px;
+  background-color: #313741;
+}
+
+.nav-bar-module {
+  float: left;
+  width: 250px;
+  height: $nav_bar_height;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-align: center;
+  background-color: #46c6e9;
+}
+
+.nav-bar-module__icon {
+  display: inline-block;
+  width: 20%;
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+
+.nav-bar-module__name {
+  font-family: 'proxima_nova_semibold', 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  width: 65%;
+  margin: 0;
+  line-height: $nav_bar_height;
+}
+
+.nav-bar-links {
+  float: left;
+}
+
+.nav-bar-links__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

@@ -1,0 +1,68 @@
+.stat__card {
+  flex: 1;
+  padding: 1.25rem 0;
+  margin-left: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #e0e8f6;
+  border-width: 1px 2px 2px 1px;
+  border-radius: 5px;
+}
+
+.stat__card:first-child {
+  margin-left: 0;
+}
+
+.title {
+  font-size: 0.8rem;
+}
+
+.primary_stat {
+  font-family: 'proxima_nova_thin', 'Helvetica', 'Arial', sans-serif;
+  font-size: 2.5em;
+}
+
+.title::after {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 1.5em auto;
+  background-color: #b3bdc1;
+  content: '';
+}
+
+
+.secondary_stat {
+  position: relative;
+  display: inline;
+  margin-top: 0.3em;
+  font-size: 0.9rem;
+  color: #748288;
+
+  &.secondary_stat__down::before {
+    top: 5px;
+    border-top-color: #ff6046;
+    border-bottom-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.secondary_stat::before {
+  position: absolute;
+  top: 1px;
+  left: -14px;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-bottom-color: #35c781;
+  content: '';
+}
+
+.stat-card__primary-text {
+  font-family: 'proxima_nova_semibold', 'Helvetica', 'Arial', sans-serif;
+  margin-top: 1em;
+  font-size: 0.9rem;
+}
+
+.stat-card__secondary-text {
+  margin-top: 0.5em;
+  font-size: 0.8rem;
+  color: #748288;
+}

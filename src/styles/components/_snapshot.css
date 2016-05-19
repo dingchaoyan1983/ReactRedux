@@ -1,0 +1,28 @@
+.snapshot {
+  min-height: 370px;
+}
+
+.acl_row {
+  padding: 1rem 3rem 2rem;
+}
+
+.row__blue {
+  @extend .acl_row;
+  color: #111;
+  background-color: #ecf3fe;
+}
+
+.row__title {
+  display: inline-block;
+}
+
+.stat__row {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1.2rem 0 1.5rem;
+}
+
+.snapshot-row__timeframe {
+  float: right;
+  margin-top: 0.8rem;
+}

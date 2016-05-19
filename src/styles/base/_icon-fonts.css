@@ -1,0 +1,619 @@
+.icn-font {
+  @mixin font__activity-cloud;
+  display: inline-block;
+  line-height: 1;
+}
+
+.icon-save:before {
+  @extend .icn-font;
+  content: '\e600';
+}
+
+.icon-add-circle:before {
+  @extend .icn-font;
+  content: '\e601';
+}
+
+.icon-add:before {
+  @extend .icn-font;
+  content: '\e602';
+}
+
+.icon-adventure:before {
+  @extend .icn-font;
+  content: '\e603';
+}
+
+.icon-apps:before {
+  @extend .icn-font;
+  content: '\e604';
+}
+
+.icon-beginner-triathlon:before {
+  @extend .icn-font;
+  content: '\e605';
+}
+
+.icon-bookmark:before {
+  @extend .icn-font;
+  content: '\e606';
+}
+
+.icon-calendar:before {
+  @extend .icn-font;
+  content: '\e607';
+}
+
+.icon-camera:before {
+  @extend .icn-font;
+  content: '\e608';
+}
+
+.icon-camp-and-recreation:before {
+  @extend .icn-font;
+  content: '\e609';
+}
+
+.icon-campaigns:before {
+  @extend .icn-font;
+  content: '\e60a';
+}
+
+.icon-century-ride:before {
+  @extend .icn-font;
+  content: '\e60b';
+}
+
+.icon-checkmark:before {
+  @extend .icn-font;
+  content: '\e60c';
+}
+
+.icon-clinic:before {
+  @extend .icn-font;
+  content: '\e60d';
+}
+
+.icon-clock:before {
+  @extend .icn-font;
+  content: '\e60e';
+}
+
+.icon-close:before {
+  @extend .icn-font;
+  vertical-align: middle;
+  content: '\e60f';
+}
+
+.icon-competition:before {
+  @extend .icn-font;
+  content: '\e610';
+}
+
+.icon-countdown:before {
+  @extend .icn-font;
+  content: '\e611';
+}
+
+.icon-cycling:before {
+  @extend .icn-font;
+  content: '\e612';
+}
+
+.icon-dashboard:before {
+  @extend .icn-font;
+  content: '\e613';
+}
+
+.icon-download:before {
+  @extend .icn-font;
+  content: '\e614';
+}
+
+.icon-duathlon:before {
+  @extend .icn-font;
+  content: '\e615';
+}
+
+.icon-expand:before {
+  @extend .icn-font;
+  content: '\e616';
+}
+
+.icon-female:before {
+  @extend .icn-font;
+  content: '\e617';
+}
+
+.icon-fill-rate:before {
+  @extend .icn-font;
+  content: '\e618';
+}
+
+.icon-filter:before {
+  @extend .icn-font;
+  content: '\e619';
+}
+
+.icon-five-k:before {
+  @extend .icn-font;
+  content: '\e61a';
+}
+
+.icon-fun-runs:before {
+  @extend .icn-font;
+  content: '\e61b';
+}
+
+.icon-half-marathon:before {
+  @extend .icn-font;
+  content: '\e61c';
+}
+
+.icon-info:before {
+  @extend .icn-font;
+  content: '\e61d';
+}
+
+.icon-instant-ads:before {
+  @extend .icn-font;
+  content: '\e61e';
+}
+
+.icon-iron-man:before {
+  @extend .icn-font;
+  content: '\e61f';
+}
+
+.icon-male:before {
+  @extend .icn-font;
+  content: '\e620';
+}
+
+.icon-map-pin:before {
+  @extend .icn-font;
+  content: '\e621';
+}
+
+.icon-marathon:before {
+  @extend .icn-font;
+  content: '\e622';
+}
+
+.icon-menu:before {
+  @extend .icn-font;
+  content: '\e623';
+}
+
+.icon-mountain-biking:before {
+  @extend .icn-font;
+  content: '\e624';
+}
+
+.icon-mud-runs:before {
+  @extend .icn-font;
+  content: '\e625';
+}
+
+.icon-newsletter:before {
+  @extend .icn-font;
+  content: '\e626';
+}
+
+.icon-notification:before {
+  @extend .icn-font;
+  content: '\e627';
+}
+
+.icon-olympic:before {
+  @extend .icn-font;
+  content: '\e628';
+}
+
+.icon-outdoors:before {
+  @extend .icn-font;
+  content: '\e629';
+}
+
+.icon-planned:before {
+  @extend .icn-font;
+  content: '\e62a';
+}
+
+.icon-play:before {
+  @extend .icn-font;
+  content: '\e62b';
+}
+
+.icon-reach:before {
+  @extend .icn-font;
+  content: '\e62c';
+}
+
+.icon-recommend:before {
+  @extend .icn-font;
+  content: '\e62d';
+}
+
+.icon-registration:before {
+  @extend .icn-font;
+  content: '\e62e';
+}
+
+.icon-revenue:before {
+  @extend .icn-font;
+  content: '\e62f';
+}
+
+.icon-ribbon:before {
+  @extend .icn-font;
+  content: '\e630';
+}
+
+.icon-running:before {
+  @extend .icn-font;
+  content: '\e631';
+}
+
+.icon-search:before {
+  @extend .icn-font;
+  content: '\e632';
+}
+
+.icon-settings:before {
+  @extend .icn-font;
+  content: '\e633';
+}
+
+.icon-share:before {
+  @extend .icn-font;
+  content: '\e634';
+}
+
+.icon-social-retargeting:before {
+  @extend .icn-font;
+  content: '\e635';
+}
+
+.icon-sprint:before {
+  @extend .icn-font;
+  content: '\e636';
+}
+
+.icon-swimming:before {
+  @extend .icn-font;
+  content: '\e637';
+}
+
+.icon-swipe:before {
+  @extend .icn-font;
+  content: '\e638';
+}
+
+.icon-ten-k:before {
+  @extend .icn-font;
+  content: '\e639';
+}
+
+.icon-trail-runs:before {
+  @extend .icn-font;
+  content: '\e63a';
+}
+
+.icon-trashcan:before {
+  @extend .icn-font;
+  content: '\e63b';
+}
+
+.icon-triathlon:before {
+  @extend .icn-font;
+  content: '\e63c';
+}
+
+.icon-trophy:before {
+  @extend .icn-font;
+  content: '\e63d';
+}
+
+.icon-undo:before {
+  @extend .icn-font;
+  content: '\e63e';
+}
+
+.icon-upload:before {
+  @extend .icn-font;
+  content: '\e63f';
+}
+
+.icon-user:before {
+  @extend .icn-font;
+  content: '\e640';
+}
+
+.icon-view:before {
+  @extend .icn-font;
+  content: '\e641';
+}
+
+.icon-walking:before {
+  @extend .icn-font;
+  content: '\e642';
+}
+
+.icon-warning:before {
+  @extend .icn-font;
+  content: '\e643';
+}
+
+.icon-maximize:before {
+  @extend .icn-font;
+  content: '\e644';
+}
+
+.icon-arrow-down:before {
+  @extend .icn-font;
+  content: '\e645';
+}
+
+.icon-arrow-down2:before {
+  @extend .icn-font;
+  content: '\e646';
+}
+
+.icon-arrow-left:before {
+  @extend .icn-font;
+  content: '\e647';
+}
+
+.icon-arrow-left2:before {
+  @extend .icn-font;
+  content: '\e648';
+}
+
+.icon-arrow-right:before {
+  @extend .icn-font;
+  content: '\e649';
+}
+
+.icon-arrow-right2:before {
+  @extend .icn-font;
+  content: '\e64a';
+}
+
+.icon-arrow-up:before {
+  @extend .icn-font;
+  content: '\e64b';
+}
+
+.icon-arrow-up2:before {
+  @extend .icn-font;
+  content: '\e64c';
+}
+
+.icon-arrow-right3:before {
+  @extend .icn-font;
+  content: '\e64d';
+}
+
+.icon-arrow-left-3:before {
+  @extend .icn-font;
+  content: '\e64e';
+}
+
+.icon-signout:before {
+  @extend .icn-font;
+  content: '\e64f';
+}
+
+.icon-faith:before {
+  @extend .icn-font;
+  content: '\e650';
+}
+
+.icon-edit:before {
+  @extend .icn-font;
+  content: '\e651';
+}
+
+.icon-circle-checkmark:before {
+  @extend .icn-font;
+  content: '\e652';
+}
+
+.icon-circle-arrow:before {
+  @extend .icn-font;
+  content: '\e653';
+}
+
+.icon-graph:before {
+  @extend .icn-font;
+  content: '\e654';
+}
+
+.icon-agreement:before {
+  @extend .icn-font;
+  content: '\e655';
+}
+
+.icon-facebook:before {
+  @extend .icn-font;
+  content: '\e656';
+}
+
+.icon-instagram:before {
+  @extend .icn-font;
+  content: '\e657';
+}
+
+.icon-tumblr:before {
+  @extend .icn-font;
+  content: '\e658';
+}
+
+.icon-twitter:before {
+  @extend .icn-font;
+  content: '\e659';
+}
+
+.icon-followers:before {
+  @extend .icn-font;
+  content: '\e65a';
+}
+
+.icon-comments:before {
+  @extend .icn-font;
+  content: '\e65b';
+}
+
+.icon-click:before {
+  @extend .icn-font;
+  content: '\e65c';
+}
+
+.icon-display:before {
+  @extend .icn-font;
+  content: '\e65d';
+}
+
+.icon-email:before {
+  @extend .icn-font;
+  content: '\e65e';
+}
+
+.icon-social-msg:before {
+  @extend .icn-font;
+  content: '\e65f';
+}
+
+.icon-repost:before {
+  @extend .icn-font;
+  content: '\e660';
+}
+
+.icon-broken-link:before {
+  @extend .icn-font;
+  content: '\e661';
+}
+
+.icon-warning-inverted:before {
+  @extend .icn-font;
+  content: '\e662';
+}
+
+.icon-fanbase:before {
+  @extend .icn-font;
+  content: '\e663';
+}
+
+.icon-marketing-success:before {
+  @extend .icn-font;
+  content: '\e664';
+}
+
+.icon-reporting:before {
+  @extend .icn-font;
+  content: '\e665';
+}
+
+.icon-lock:before {
+  @extend .icn-font;
+  content: '\e666';
+}
+
+.icon-circle-x:before {
+  @extend .icn-font;
+  content: '\e667';
+}
+
+.icon-channels:before {
+  @extend .icn-font;
+  content: '\e668';
+}
+
+.icon-favorite:before {
+  @extend .icn-font;
+  content: '\e669';
+}
+
+.icon-retweet:before {
+  @extend .icn-font;
+  content: '\e66A';
+}
+
+.icon-ads-channel:before {
+  @extend .icn-font;
+  content: '\e66B';
+}
+
+.icon-heart:before {
+  @extend .icn-font;
+  content: '\e66C';
+}
+
+.icon-total-ad-campaigns:before {
+  @extend .icn-font;
+  content: '\e66D';
+}
+
+.icon-success:before {
+  @extend .icn-font;
+  content: '\e66E';
+}
+
+.icon-platform-nav:before {
+  @extend .icn-font;
+  content: '\e66F';
+}
+
+.icon-map-dot:before {
+  @extend .icn-font;
+  content: '\e670';
+}
+
+.icon-map-pin2:before {
+  @extend .icn-font;
+  content: '\e671';
+}
+
+.icon-left-double-arrow:before {
+  @extend .icn-font;
+  content: '\e674';
+}
+
+.uniformly-scale-icons {
+  .icon-swimming:before {
+    font-size: 100%;
+  }
+
+  .icon-cycling:before {
+    font-size: 241%;
+  }
+
+  .icon-mountain-biking:before {
+    font-size: 245%;
+  }
+
+  .icon-running:before {
+    font-size: 264%;
+  }
+
+  .icon-walking:before {
+    font-size: 259%;
+  }
+
+  .icon-triathlon:before {
+    font-size: 255%;
+  }
+
+  .icon-duathlon:before {
+    font-size: 218%;
+  }
+
+  .icon-fun-runs:before {
+    font-size: 245%;
+  }
+
+  .icon-clinic:before {
+    font-size: 290%;
+  }
+}

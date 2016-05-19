@@ -1,0 +1,36 @@
+.tabs__list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tabs__list__item {
+  flex: 1;
+  border-left: 1px solid #fff;
+
+  &:first-child {
+    border-left: none;
+  }
+}
+
+.tabs__title {
+  font-family: 'proxima_nova_semibold', 'Helvetica', 'Arial', sans-serif;
+  display: block;
+  padding: 1em;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  background-color: #46c6e9;
+
+  &.tabs__title--active {
+    color: #46c6e9;
+    background-color: #fff;
+  }
+}

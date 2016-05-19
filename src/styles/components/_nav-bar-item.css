@@ -1,0 +1,16 @@
+.nav-bar-item-container {
+  display: inline;
+}
+
+.nav-bar-item {
+  display: inline-block;
+  padding: 0 30px;
+  font-size: 0.9rem;
+  line-height: 68px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-bar-item-acitve {
+  color: #46c6e9;
+}

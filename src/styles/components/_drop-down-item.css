@@ -1,0 +1,36 @@
+.select-option {
+  line-height: 1.75rem;
+  color: #46c6e9;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 20px 5px 15px;
+  text-align: left;
+  white-space: nowrap;
+  list-style: none;
+
+  &.active {
+    background-color: #46c6e9;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &.active::after {
+    @extend .icn-font;
+    content: '\e60c';
+    float: right;
+    margin-left: 0.7rem;
+    line-height: 1.5;
+    color: #fff;
+  }
+}
+
+
+.select-option:hover {
+  background-color: #46c6e9;
+
+  a {
+    color: #fff;
+  }
+}
