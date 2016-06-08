@@ -7,10 +7,10 @@
   padding: 0 30px;
   font-size: 0.9rem;
   line-height: 68px;
-  color: #fff;
+  color: $color_white;
   text-decoration: none;
 }
 
 .nav-bar-item-acitve {
-  color: #46c6e9;
+  color: $color_picton-blue;
 }

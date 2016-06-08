@@ -13,7 +13,7 @@ $title_bar_height: 75px;
 }
 
 .title-text {
-  font-family: 'proxima_nova_light', 'Helvetica', 'Arial', sans-serif;
+  @mixin font__proxima-nova-light;
   margin: 0;
   font-size: 1.65rem;
   line-height: 77px;

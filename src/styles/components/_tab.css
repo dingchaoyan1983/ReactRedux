@@ -8,7 +8,7 @@
 
 .tabs__list__item {
   flex: 1;
-  border-left: 1px solid #fff;
+  border-left: 1px solid $color_white;
 
   &:first-child {
     border-left: none;
@@ -16,21 +16,21 @@
 }
 
 .tabs__title {
-  font-family: 'proxima_nova_semibold', 'Helvetica', 'Arial', sans-serif;
+  @mixin font__proxima-nova-semibold;
   display: block;
   padding: 1em;
   font-size: 0.8rem;
   letter-spacing: 0.2em;
-  color: #fff;
+  color: $color_white;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
   user-select: none;
-  background-color: #46c6e9;
+  background-color: $color_picton-blue;
 
   &.tabs__title--active {
-    color: #46c6e9;
-    background-color: #fff;
+    color: $color_picton-blue;
+    background-color: $color_white;
   }
 }

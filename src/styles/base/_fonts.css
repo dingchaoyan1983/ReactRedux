@@ -3,4 +3,4 @@
 @mixin font-face proxima_nova_thin, proximanova-thin-webfont;
 @mixin font-face proxima_nova_semibold, proximanova-semibold-webfont;
 @mixin font-face proxima_nova_regular, proximanova-regular-webfont;
-@mixin font-face activity_cloud, activity-cloud;
+@mixin font-face font_icon, font-icon;

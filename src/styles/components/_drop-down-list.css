@@ -4,8 +4,8 @@
   right: 0;
   z-index: 9200;
   min-width: 150px;
-  background-color: #fff;
-  border: 2px solid #d7d8db;
+  background-color: $color_white;
+  border: 2px solid $color_ghost;
   border-radius: 5px;
 }
 

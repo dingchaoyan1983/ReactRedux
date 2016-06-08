@@ -1,5 +1,5 @@
 .drop-down {
-  font-family: 'proxima_nova_light', 'Helvetica', 'Arial', sans-serif;
+  @mixin font__proxima-nova-light;
   position: relative;
   display: inline-block;
 }

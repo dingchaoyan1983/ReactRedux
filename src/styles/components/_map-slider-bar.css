@@ -1,12 +1,12 @@
 .map-controls {
+  @mixin font__proxima-nova-regular;
   position: absolute;
   top: 30px;
   left: -290px;
   width: 260px;
   max-height: calc(100% - 2 * 30px);
   overflow: visible;
-  font-family: 'proxima_nova_regular';
-  background-color: #3e444e;
+  background-color: $color_light-river-bed;
   transition: left 0.5s ease-in;
 
   &.expanded {
@@ -16,17 +16,17 @@
 }
 
 .map-controls--toggler {
+  @mixin font__proxima-nova-thin;
   position: absolute;
   top: 10px;
   left: calc(260px + 30px + 30px);
   width: 40px;
   height: 40px;
   padding-top: 6px;
-  font-family: 'proxima_nova_thin';
   font-size: 0.8rem;
   color: #f8f8f8;
   cursor: pointer;
-  background-color: #46c6e9;
+  background-color: $color_picton-blue;
   border: 0;
   border-radius: 50px;
   transition: left 0.5s ease-in;

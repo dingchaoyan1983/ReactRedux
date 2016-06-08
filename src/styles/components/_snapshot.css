@@ -8,8 +8,8 @@
 
 .row__blue {
   @extend .acl_row;
-  color: #111;
-  background-color: #ecf3fe;
+  color: $color_black;
+  background-color: $color_light-lavender;
 }
 
 .row__title {

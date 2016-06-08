@@ -38,6 +38,6 @@ $proxima-stack: 'Helvetica', 'Arial', sans-serif;
   font-family: 'proxima_nova_black', $proxima-stack;
 }
 
-@define-mixin font__activity-cloud {
-  font-family: 'activity_cloud', 'Helvetica', 'Arial', sans-serif;
+@define-mixin font__icon {
+  font-family: 'font_icon', 'Helvetica', 'Arial', sans-serif;
 }
