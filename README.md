@@ -1,4 +1,13 @@
-# React Redux Starter Kit
+## What is done
+This Project is a side project which I want to do some practices with `React + Redux + React-router`, to start it quickly, I used [redux-cli](https://github.com/SpencerCDixon/redux-cli) to generate the skeleton of project. this cli is awesome, and also I modified some `blueprints` in this project.
+
+## how to run up it
+1. npm install
+2. npm run start
+3. http://localhost:3000
+
+
+<!-- # React Redux Starter Kit
 
 [![Join the chat at https://gitter.im/davezuko/react-redux-starter-kit](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/davezuko/react-redux-starter-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/davezuko/react-redux-starter-kit.svg?branch=master)](https://travis-ci.org/davezuko/react-redux-starter-kit?branch=master)
@@ -222,4 +231,4 @@ This project wouldn't be possible without help from the community, so I'd like t
 * [Spencer Dixin](https://github.com/SpencerCDixon) - For your creation of [redux-cli](https://github.com/SpencerCDixon/redux-cli).
 * [Jonas Matser](https://github.com/mtsr) - For your help in triaging issues and unending support in our Gitter channel.
 
-And to everyone else who has contributed, even if you are not listed here your work is appreciated.
+And to everyone else who has contributed, even if you are not listed here your work is appreciated. -->
