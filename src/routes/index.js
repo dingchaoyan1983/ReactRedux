@@ -2,7 +2,7 @@
 import CoreLayout from '../layouts/CoreLayout/CoreLayout'
 import Home from './Home';
 import OverviewRoute from './Overview';
-import PeopleRoute from './People';
+import StudentsRoute from './Students';
 import MapsRoute from './Maps';
 
 
@@ -10,14 +10,22 @@ import MapsRoute from './Maps';
     PlainRoute objects to build route definitions.   */
 
 export const createRoutes = (store) => ({
-  path: 'memberships',
-  component: CoreLayout,
-  indexRoute: Home,
-  childRoutes: [
-    OverviewRoute(store),
-    PeopleRoute(store),
-    MapsRoute(store)
-  ]
+  path: '/',
+  indexRoute: {
+    onEnter: (nextState, replace) => replace('friendships')
+  },
+  childRoutes: [{
+    path: 'friendships',
+    indexRoute: {
+      onEnter: (nextState, replace) => replace('friendships/overview')
+    },
+    component: CoreLayout,
+    childRoutes: [
+      OverviewRoute(store),
+      StudentsRoute(store),
+      MapsRoute(store)
+    ]
+  }]
 })
 
 /*  Note: childRoutes can be chunked or otherwise loaded programmatically

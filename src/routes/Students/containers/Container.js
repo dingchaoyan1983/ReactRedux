@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 export class People extends React.Component {
   render () {
     return (
-      <div>People page</div>
+      <div>Students page</div>
     )
   }
 }
