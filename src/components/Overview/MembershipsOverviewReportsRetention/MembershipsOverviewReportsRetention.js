@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import RingChart from 'components/RingChart';
+
 
 export class MembershipsOverviewReportsRetention extends React.Component {
   constructor(props, context) {
@@ -9,7 +11,7 @@ export class MembershipsOverviewReportsRetention extends React.Component {
   render () {
     return (
       <div>
-        students component
+        <RingChart radius={300}/>
       </div>
     )
   }
