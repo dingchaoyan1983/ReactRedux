@@ -17,7 +17,7 @@ export class MembershipsOverviewReports extends React.Component {
   render () {
     return (
       <div>
-        <Tab tabs={this.tabs} />
+        <Tab tabs={this.tabs} {...this.props}/>
       </div>
     )
   }

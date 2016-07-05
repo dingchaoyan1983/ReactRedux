@@ -21,7 +21,6 @@ class StudentsRiskLevelChart extends React.Component {
       </div>
     );
   }
-
 }
 
 StudentsRiskLevelChart.defaultProps = {

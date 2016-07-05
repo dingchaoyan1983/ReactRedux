@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchOverviewPerformance } from '../modules/snap';
+import { fetchRiskLevels } from '../modules/riskLevels';
 import _get from 'lodash/object/get';
 
 import Snapshot from 'components/Overview/Snapshot';
@@ -16,7 +17,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    fetchOverviewPerformance
+    fetchOverviewPerformance,
+    fetchRiskLevels
   }, dispatch);
 }
 
@@ -36,7 +38,7 @@ export default class Overview extends React.Component {
         <Snapshot {...this.props}>
           {children}
         </Snapshot>
-        <MembershipsOverviewReports/>
+        <MembershipsOverviewReports {...this.props}/>
         {this.props.children}
       </div>
     )

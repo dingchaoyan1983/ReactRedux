@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import snap from './snap';
-import renewals from './renewals';
+import riskLevels from './riskLevels';
 
 export default combineReducers({
   snap,
-  renewals
+  riskLevels
 })
