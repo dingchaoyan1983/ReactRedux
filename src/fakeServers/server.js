@@ -1,11 +1,11 @@
 import Pretender from 'pretender';
-import membershipsOverviewPerformanceRoutes from './Overview/membershipsOverviewPerformance';
-import membershipsMapsBranchesRoutes from './maps/membershipsMapsBranches';
-import membershipsMapsMembersRoutes from './maps/membershipsMapsMembers';
+import friendshipsOverviewPerformanceRoutes from './Overview/friendshipsOverviewPerformance';
+import friendshipsMapsBranchesRoutes from './maps/friendshipsMapsBranches';
+import friendshipsMapsMembersRoutes from './maps/friendshipsMapsMembers';
 
 let server = new Pretender();
-server.map(membershipsOverviewPerformanceRoutes);
-server.map(membershipsMapsBranchesRoutes);
-server.map(membershipsMapsMembersRoutes);
+server.map(friendshipsOverviewPerformanceRoutes);
+server.map(friendshipsMapsBranchesRoutes);
+server.map(friendshipsMapsMembersRoutes);
 
 export default server;

@@ -5,7 +5,7 @@ const center = {
   lng: -96.801146
 };
 
-let membershipsMapsMembers = {
+let friendshipsMapsMembers = {
   id: 1,
   type: 'member_locations',
   attributes: {
@@ -23,12 +23,12 @@ function generateMapPoints(points_count, center, distance) {
   return map_points;
 }
 
-export default function membershipsMapsMembersRoutes() {
-  this.get('/api/memberships/maps/members', (request) => {
+export default function friendshipsMapsMembersRoutes() {
+  this.get('/api/friendships/maps/members', (request) => {
     return [
       200,
       {'content-type': 'application/json'},
-      JSON.stringify({data: membershipsMapsMembers})
+      JSON.stringify({data: friendshipsMapsMembers})
     ];
   }, 300);
 }

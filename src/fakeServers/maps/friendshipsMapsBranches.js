@@ -1,5 +1,5 @@
-export default function membershipsMapsBranchesRoutes() {
-  this.get('/api/memberships/maps/branches', (request) => {
+export default function friendshipsMapsBranchesRoutes() {
+  this.get('/api/friendships/maps/branches', (request) => {
     return [
       200,
       {'content-type': 'application/json'},

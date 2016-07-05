@@ -16,8 +16,8 @@ export function fetchMapData(mapType) {
     try {
       if (mapType === 'current') {
         payload = await Promise.all([
-          $.get('/api/memberships/maps/branches'),
-          $.get('/api/memberships/maps/members')
+          $.get('/api/friendships/maps/branches'),
+          $.get('/api/friendships/maps/members')
         ]);
       } else if (mapType === 'renewal') {
         payload = await [{}, {}];

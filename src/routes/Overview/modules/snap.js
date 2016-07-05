@@ -16,7 +16,7 @@ export function fetchOverviewPerformance(timeframe) {
         REQUEST_COMPELTED: REQUEST_COMPELTED,
         REQUEST_FAILED: REQUEST_FAILED
       },
-      url: `/api/memberships/reports/overview?time_frame=${timeframe}`,
+      url: `/api/friendships/reports/overview?time_frame=${timeframe}`,
       method: 'GET'
     }
   }

@@ -4,7 +4,7 @@ function randomNumber(bit) {
 function generateData(time_frame) {
   return {
     id: time_frame,
-    type: 'memberships_overview_performance',
+    type: 'friendships_overview_performance',
     attributes: {
       snapshot: [
         {
@@ -40,8 +40,8 @@ function generateData(time_frame) {
 
 let performances = [30, 60, 90, 'quarter', 'year'].map(generateData);
 
-export default function membershipsOverviewPerformanceRoutes() {
-  this.get('/api/memberships/reports/overview', (request) => {
+export default function friendshipsOverviewPerformanceRoutes() {
+  this.get('/api/friendships/reports/overview', (request) => {
     let res = performances.find(function(item) {
       return item.id == request.queryParams.time_frame;
     });
