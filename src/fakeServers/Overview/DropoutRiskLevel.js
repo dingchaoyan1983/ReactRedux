@@ -169,12 +169,12 @@ function generateData(time_frame) {
   };
 }
 
-export default [30, 60, 90].map(generateData);
+const risks =  [30, 60, 90].map(generateData);
 
 
 export default function dropoutRiskLevelRoutes() {
   this.get('/api/friendships/reports/dropout', (request) => {
-    let res = performances.find(function(item) {
+    let res = risks.find(function(item) {
       return item.id == request.queryParams.time_frame;
     });
 
