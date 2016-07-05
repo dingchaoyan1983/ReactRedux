@@ -9,8 +9,8 @@ export class MembershipsOverviewReports extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.tabs = [
-      {name: 'students', contentComponent: MembershipsOverviewReportsRetention},
-      {name: 'teachers', contentComponent: MembershipsOverviewReportsAcquisition}
+      {name: 'students', contentComponent: MembershipsOverviewReportsRetention, selectedTimeframe: 30},
+      {name: 'teachers', contentComponent: MembershipsOverviewReportsAcquisition, selectedTimeframe: 30}
     ];
   }
 

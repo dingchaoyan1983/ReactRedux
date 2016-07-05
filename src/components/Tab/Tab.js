@@ -13,16 +13,24 @@ export class Tab extends React.Component {
     }
 
     this.state = {selected: initSelected};
+    this.changeTabSpecifiedVariables = this.changeTabSpecifiedVariables.bind(this);
+  }
+
+  get selectedTabObj() {
+    return this.props.tabs.find(item => this.state.selected === item.name);
   }
 
   render () {
-    let {tabs, initSelected, ...rest} = this.props;
-    let {selected} = this.state;
-    let {contentComponent} = tabs.find(function({name}) {
+    const {tabs, initSelected, ...rest} = this.props;
+    const {selected} = this.state;
+    let {name, contentComponent, ...tabRest} = tabs.find(function({name}) {
       return name === selected;
     });
+
+    let changeTabSpecifiedVariables = this.changeTabSpecifiedVariables;
+
     contentComponent = contentComponent || 'div';
-    let children = tabs.map(function({name}, index) {
+    const children = tabs.map(function({name}, index) {
       return <li className={classnames('tabs__list__item')} key={index} onClick={this.onSelect.bind(this, name)}>
                 <a className={classnames('tabs__title', selected === name ? 'tabs__title--active' : '')}>
                   {name}
@@ -36,7 +44,7 @@ export class Tab extends React.Component {
           {children}
         </ul>
         <div>
-          {React.createElement(contentComponent, {rest})}
+          {React.createElement(contentComponent, {changeTabSpecifiedVariables, ...Object.assign({}, rest, tabRest)})}
         </div>
       </div>
     );
@@ -45,7 +53,18 @@ export class Tab extends React.Component {
   onSelect(name) {
     this.setState({
       selected: name
+    }, ()=> {
+      if(this.props.onSelect) {
+        this.props.onSelect(name);
+      }
     });
+  }
+
+  changeTabSpecifiedVariables(obj) {
+    delete obj.name;
+    delete obj.contentComponent;
+
+    Object.assign(this.selectedTabObj, obj);
   }
 }
 
