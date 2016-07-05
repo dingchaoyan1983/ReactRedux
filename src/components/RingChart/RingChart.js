@@ -79,12 +79,10 @@ export class RingChart extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount');
     this.drawRings();
   }
 
   componentDidUpdate() {
-    console.log('componentDidUpdate');
     this.drawRings(true);
   }
 
