@@ -8,19 +8,10 @@ export class RingChart extends React.Component {
     this._arcFunc = d3.arc()
       .cornerRadius(5)
       .startAngle(0);
-
-    this.state = {
-      radius: props.radius,
-      ringWidth: props.ringWidth,
-      backgroundColor: props.backgroundColor,
-      foregroundColor: props.foregroundColor,
-      canvasBgColor: props.canvasBgColor,
-      percent: props.percent
-    };
   }
 
   get canvasWidth() {
-    return this.state.radius * 2;
+    return this.props.radius * 2;
   }
 
   get canvasHeight() {
@@ -28,33 +19,33 @@ export class RingChart extends React.Component {
   }
 
   get innerRadius() {
-    return this.state.radius - this.state.ringWidth;
+    return this.props.radius - this.props.ringWidth;
   }
 
   get svgStyles() {
     return {
-      backgroundColor: this.state.canvasBgColor
+      backgroundColor: this.props.canvasBgColor
     };
   }
 
   get backgroundColorStyle() {
     return {
-      fill: this.state.backgroundColor
+      fill: this.props.backgroundColor
     };
   }
 
   get foregroundColorStyle() {
     return {
-      fill: this.state.foregroundColor
+      fill: this.props.foregroundColor
     };
   }
 
   get canvasTransform() {
-    return `translate(${this.state.radius},${this.state.radius})`;
+    return `translate(${this.props.radius},${this.props.radius})`;
   }
 
   get arcFunc() {
-    return this._arcFunc.innerRadius(this.innerRadius).outerRadius(this.state.radius);
+    return this._arcFunc.innerRadius(this.innerRadius).outerRadius(this.props.radius);
   }
 
   render() {
@@ -64,18 +55,9 @@ export class RingChart extends React.Component {
           <path ref="back-annular" style={this.backgroundColorStyle}></path>
           <path ref="fore-annular" style={this.foregroundColorStyle}></path>
         </g>
-        <text textAnchor="middle" alignmentBaseline="middle" x={this.state.radius} y={this.state.radius}>{this.state.percent * 100}%</text>
+        <text textAnchor="middle" alignmentBaseline="middle" x={this.props.radius} y={this.props.radius}>{parseInt(this.props.percent * 100)}%</text>
       </svg>
     )
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return !(nextProps.radius === nextState.radius
-      && nextProps.ringWidth === nextState.ringWidth
-      && nextProps.backgroundColor === nextState.backgroundColor
-      && nextProps.foregroundColor === nextState.foregroundColor
-      && nextProps.canvasBgColor === nextState.canvasBgColor
-      && nextProps.percent === nextState.percent)
   }
 
   componentDidMount() {
@@ -112,7 +94,7 @@ export class RingChart extends React.Component {
             return arcFunc(d);
           };
         });
-      }, 2 * Math.PI * this.state.percent);
+      }, 2 * Math.PI * this.props.percent);
   }
 }
 

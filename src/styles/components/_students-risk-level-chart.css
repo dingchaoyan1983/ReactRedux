@@ -1,0 +1,39 @@
+.overview-retention-chart {
+  @mixin flex-row;
+  margin-top: 30px;
+}
+
+.overview-retention-chart__item {
+  flex: 1;
+  font-size: 0.7rem;
+  text-align: center;
+  cursor: pointer;
+
+  .percent-text {
+    font-size: 2rem;
+  }
+
+  &:after {
+    display: inline-block;
+    margin-top: -30px;
+    border: 30px solid rgba(0, 0, 0, 0);
+    content: '';
+  }
+
+  &.selected {
+    &:after {
+      border-bottom-color: $color_river-bed;
+    }
+  }
+}
+
+.overview-retention-chart__item__title {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.overview-retention-chart__content {
+  min-height: 100px;
+  margin-top: -4px;
+  background-color: $color_river-bed;
+}

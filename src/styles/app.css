@@ -32,8 +32,7 @@
 @import 'components/google-map.css';
 @import 'components/map-slider-bar.css';
 @import 'components/students-retention.css';
-
-
+@import 'components/students-risk-level-chart.css';
 
 /* 6. Page-specific styles */
 @import 'containers/maps.css';
