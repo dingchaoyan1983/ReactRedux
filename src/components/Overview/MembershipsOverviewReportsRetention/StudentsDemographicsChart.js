@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import * as d3 from 'd3';
+import _debounce from 'lodash/function/debounce';
 
 export class StudentsDemographicsChart extends React.Component {
   constructor(props, context) {
@@ -47,7 +48,7 @@ export class StudentsDemographicsChart extends React.Component {
     this.barsDOM = d3.select(ReactDOM.findDOMNode(this.refs.barsDOM));
 
     this.renderChart();
-    $(window).on('resize.demographics_chart', this.onResize);
+    $(window).on('resize.demographics_chart', _debounce(this.onResize, 200));
   }
 
   componentDidUpdate() {
