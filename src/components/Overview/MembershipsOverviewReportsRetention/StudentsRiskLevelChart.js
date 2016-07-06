@@ -1,6 +1,8 @@
 import React from 'react';
-import RingChart from 'components/RingChart';
 import classnames from 'classnames';
+import RingChart from 'components/RingChart';
+import StudentsDemographicsChart from './StudentsDemographicsChart';
+import _get from 'lodash/object/get';
 
 const RING_COLOR = {
   'low-risk': {
@@ -45,6 +47,17 @@ class StudentsRiskLevelChart extends React.Component {
     }
   }
 
+  get selectedRiskLevel() {
+    const riskLevels = this.props['risk-levels'];
+    const selected = this.state.selected;
+
+    if(riskLevels && selected) {
+      return riskLevels.find(item => item.name === selected);
+    } else {
+      return null;
+    }
+  }
+
   render() {
     const {['total-students']: totalStudents} = this.props;
 
@@ -76,7 +89,9 @@ class StudentsRiskLevelChart extends React.Component {
         <div className="overview-retention-chart">
           {riskLevelsChart}
         </div>
-        <div className="overview-retention-chart__content"></div>
+        <div className="overview-retention-chart__content">
+          <StudentsDemographicsChart dataSet={_get(this.selectedRiskLevel, 'demographics')}/>
+        </div>
       </div>
     );
   }

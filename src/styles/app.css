@@ -33,6 +33,8 @@
 @import 'components/map-slider-bar.css';
 @import 'components/students-retention.css';
 @import 'components/students-risk-level-chart.css';
+@import 'components/students-demographics-chart.css';
+
 
 /* 6. Page-specific styles */
 @import 'containers/maps.css';

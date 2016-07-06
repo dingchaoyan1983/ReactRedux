@@ -1,0 +1,61 @@
+.students-demographics-chart {
+  height: 350px;
+}
+
+.demographics_chart__x-asix,
+.demographics_chart__y-asix {
+  .domain,
+  line {
+    fill: none;
+    stroke: $color_dark-grey;
+    shape-rendering: crispEdges;
+  }
+
+  text {
+    @mixin font__proxima-nova-light;
+    fill: $color_shadow-grey;
+    stroke: $color_shadow-grey;
+    shape-rendering: crispEdges;
+  }
+}
+
+.color_female {
+  color: $color_pink--tm-female;
+  fill: $color_pink--tm-female;
+}
+
+.color_male {
+  color: $color_blue--tm-male;
+  fill: $color_blue--tm-male;
+}
+
+.overview-retention-chart-gender {
+  text-align: right;
+}
+
+.overview-retention-chart-gender__female,
+.overview-retention-chart-gender__male {
+  display: inline-block;
+  margin-left: 15px;
+
+  &:before {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 5px;
+    content: '';
+  }
+}
+
+.overview-retention-chart-gender__female {
+  &:before {
+    background-color: $color_pink--tm-female;
+  }
+}
+
+.overview-retention-chart-gender__male {
+  &:before {
+    background-color: $color_blue--tm-male;
+  }
+}
