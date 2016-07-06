@@ -55,7 +55,7 @@ export class RingChart extends React.Component {
           <path ref="back-annular" style={this.backgroundColorStyle}></path>
           <path ref="fore-annular" style={this.foregroundColorStyle}></path>
         </g>
-        <text textAnchor="middle" alignmentBaseline="middle" x={this.props.radius} y={this.props.radius}>{parseInt(this.props.percent * 100)}%</text>
+        <text textAnchor="middle" dominantBaseline="middle" x={this.props.radius} y={this.props.radius}>{parseInt(this.props.percent * 100)}%</text>
       </svg>
     )
   }
