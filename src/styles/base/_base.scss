@@ -5,14 +5,10 @@
 }
 
 body {
+  @include font__proxima-nova-regular;
   height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: 'proxima_nova_regular', 'Helvetica', 'Arial', sans-serif;
-
-  > .ember-view {
-    height: 100vh;
-  }
 }
 
 table {
@@ -21,7 +17,7 @@ table {
 }
 
 .membership-application {
-  @mixin font__proxima-nova-regular;
+  @include font__proxima-nova-regular;
   padding: 0;
   margin: 0;
 }
@@ -37,12 +33,12 @@ h3,
 h4,
 h5,
 h6 {
-  @mixin font__proxima-nova-regular;
+  @include font__proxima-nova-regular;
   font-weight: 400;
 }
 
 strong {
-  @mixin font__proxima-nova-semibold;
+  @include font__proxima-nova-semibold;
   font-weight: 400;
 }
 
