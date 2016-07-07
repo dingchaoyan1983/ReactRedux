@@ -1,9 +1,14 @@
-.map_container {
-  height: calc(100vh - $nav_bar_height - $title_bar_height);
+@import 'src/styles/utils/mixins';
+@import 'src/styles/utils/colors';
+@import 'src/styles/variables/nav-bar';
+@import 'src/styles/variables/title-bar';
+
+.container {
+  height: calc(100vh - #{$nav_bar_height} - #{$title_bar_height});
   position: relative;
 }
 
-.map-layers {
+.layers {
   padding: 5px;
   text-align: center;
 

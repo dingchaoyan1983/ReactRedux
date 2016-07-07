@@ -1,5 +1,8 @@
-.map-controls {
-  @mixin font__proxima-nova-regular;
+@import 'src/styles/utils/colors';
+@import 'src/styles/utils/mixins';
+
+.mapControls {
+  @include font__proxima-nova-regular;
   position: absolute;
   top: 30px;
   left: -290px;
@@ -15,8 +18,8 @@
   }
 }
 
-.map-controls--toggler {
-  @mixin font__proxima-nova-thin;
+.toggler {
+  @include font__proxima-nova-thin;
   position: absolute;
   top: 10px;
   left: calc(260px + 30px + 30px);
@@ -31,7 +34,7 @@
   border-radius: 50px;
   transition: left 0.5s ease-in;
 
-  &.expanded {
+  &.togglerExpanded {
     left: calc(260px + 30px);
     transition: left 0.5s ease-out;
   }

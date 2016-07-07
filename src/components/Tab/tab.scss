@@ -1,4 +1,7 @@
-.tabs__list {
+@import 'src/styles/utils/colors';
+@import 'src/styles/utils/mixins';
+
+.list {
   display: flex;
   justify-content: flex-start;
   padding: 0;
@@ -6,7 +9,7 @@
   list-style: none;
 }
 
-.tabs__list__item {
+.item {
   flex: 1;
   border-left: 1px solid $color_white;
 
@@ -15,8 +18,8 @@
   }
 }
 
-.tabs__title {
-  @mixin font__proxima-nova-semibold;
+.title {
+  @include font__proxima-nova-semibold;
   display: block;
   padding: 1em;
   font-size: 0.8rem;
@@ -29,7 +32,7 @@
   user-select: none;
   background-color: $color_picton-blue;
 
-  &.tabs__title--active {
+  &.active {
     color: $color_picton-blue;
     background-color: $color_white;
   }

@@ -1,30 +1,35 @@
-.students-demographics-chart {
+@import 'src/styles/utils/mixins';
+@import 'src/styles/utils/colors';
+
+.container {
   height: 350px;
 }
 
-.demographics_chart__x-asix,
-.demographics_chart__y-asix {
-  .domain,
-  line {
-    fill: none;
-    stroke: $color_dark-grey;
-    shape-rendering: crispEdges;
-  }
+.xAxis,
+.yAxis {
+  :global {
+    .domain,
+    line {
+      fill: none;
+      stroke: $color_dark-grey;
+      shape-rendering: crispEdges;
+    }
 
-  text {
-    @mixin font__proxima-nova-light;
-    fill: $color_shadow-grey;
-    stroke: $color_shadow-grey;
-    shape-rendering: crispEdges;
+    text {
+      @include font__proxima-nova-light;
+      fill: $color_shadow-grey;
+      stroke: $color_shadow-grey;
+      shape-rendering: crispEdges;
+    }
   }
 }
 
-.color_female {
+.female {
   color: $color_pink--tm-female;
   fill: $color_pink--tm-female;
 }
 
-.color_male {
+.male{
   color: $color_blue--tm-male;
   fill: $color_blue--tm-male;
 }

@@ -1,15 +1,18 @@
-.overview-retention-chart {
-  @mixin flex-row;
+@import 'src/styles/utils/mixins';
+@import 'src/styles/utils/colors';
+
+.chart {
+  @include flex-row;
   margin-top: 30px;
 }
 
-.overview-retention-chart__item {
+.chartItem {
   flex: 1;
   font-size: 0.7rem;
   text-align: center;
   cursor: pointer;
 
-  .percent-text {
+  .percentText {
     font-size: 2rem;
   }
 
@@ -27,12 +30,12 @@
   }
 }
 
-.overview-retention-chart__item__title {
+.chartItemTitle {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.overview-retention-chart__content {
+.chartContent {
   min-height: 100px;
   margin-top: -4px;
   background-color: $color_river-bed;

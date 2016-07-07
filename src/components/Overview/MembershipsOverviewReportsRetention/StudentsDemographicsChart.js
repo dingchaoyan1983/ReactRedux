@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import * as d3 from 'd3';
 import _debounce from 'lodash/function/debounce';
+import css from './students-demographics-chart.scss';
 
 export class StudentsDemographicsChart extends React.Component {
   constructor(props, context) {
@@ -27,11 +28,11 @@ export class StudentsDemographicsChart extends React.Component {
 
   render() {
     return (
-      <div ref="selfDOM" className="students-demographics-chart">
+      <div ref="selfDOM" className={css.container}>
         <svg ref="svgDOM">
           <g ref="canvasDOM">
-            <g ref="xAxisDOM" className="demographics_chart__x-asix"></g>
-            <g ref="yAxisDOM" className="demographics_chart__y-asix"></g>
+            <g ref="xAxisDOM" className={css.xAxis}></g>
+            <g ref="yAxisDOM" className={css.yAxis}></g>
             <g ref="barsDOM"></g>
           </g>
         </svg>
@@ -101,14 +102,14 @@ export class StudentsDemographicsChart extends React.Component {
     const maleTranslateX = xScale.bandwidth() / 2;
     const updatedBarWrapper = update.attr('transform', d => `translate(${xScale(d.age)}, 0)`);
 
-    updatedBarWrapper.select('rect.color_female')
+    updatedBarWrapper.select(`rect.${css.female}`)
       .attr('width', barWidth)
       .transition()
       .duration(750)
       .attr('transform', d => `translate(${femaleTranslateX}, ${yScale(d.female / 100)})`)
       .attr('height', d => canvasHeight - yScale(d.female / 100));
 
-    updatedBarWrapper.select('rect.color_male')
+    updatedBarWrapper.select(`rect.${css.male}`)
       .attr('width', barWidth)
       .transition()
       .duration(750)
@@ -121,7 +122,7 @@ export class StudentsDemographicsChart extends React.Component {
 
     enteredBarWrapper.append('rect')
       .attr('width', barWidth)
-      .attr('class', 'color_female')
+      .attr('class', css.female)
       .attr('transform', () => `translate(${femaleTranslateX}, ${yScale(0)})`)
       .attr('height', () => canvasHeight - yScale(0))
       .transition()
@@ -130,7 +131,7 @@ export class StudentsDemographicsChart extends React.Component {
       .attr('height', d => canvasHeight - yScale(d.female / 100));
 
     enteredBarWrapper.append('rect')
-      .attr('class', 'color_male')
+      .attr('class', css.male)
       .attr('width', barWidth)
       .attr('transform', () => `translate(${maleTranslateX}, ${yScale(0)})`)
       .attr('height', () => canvasHeight - yScale(0))

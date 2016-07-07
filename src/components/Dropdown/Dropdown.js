@@ -3,6 +3,7 @@ import DropdownTrigger from './DropdownTrigger';
 import DropdownList from './DropdownList';
 import DropdownItem from './DropdownItem';
 import dropdownManager from './DropdownManager';
+import css from './drop-down.scss';
 
 export class Dropdown extends React.Component {
   constructor(props, context) {
@@ -17,7 +18,7 @@ export class Dropdown extends React.Component {
     let {dropdownTriggerComponent, dropdownOptionComponent, options} = this.props;
 
     return (
-      <div className="drop-down" onClick={(e) => {
+      <div className={css.container} onClick={(e) => {
         e.stopPropagation();
         dropdownManager.close(this);
       }}>

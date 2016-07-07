@@ -1,12 +1,14 @@
-$nav_bar_height: 68px;
+@import 'src/styles/utils/colors';
+@import 'src/styles/utils/mixins';
+@import 'src/styles/variables/nav-bar';
 
-.nav-bar {
+.container {
   height: $nav_bar_height;
   letter-spacing: 0.6px;
   background-color: $color_river-bed;
 }
 
-.nav-bar-module {
+.module {
   float: left;
   width: 250px;
   height: $nav_bar_height;
@@ -17,26 +19,26 @@ $nav_bar_height: 68px;
   background-color: $color_picton-blue;
 }
 
-.nav-bar-module__icon {
+.icon {
   display: inline-block;
   width: 20%;
   font-size: 1.25rem;
   vertical-align: middle;
 }
 
-.nav-bar-module__name {
-  @mixin font__proxima-nova-semibold;
+.name {
+  @include font__proxima-nova-semibold;
   display: inline-block;
   width: 65%;
   margin: 0;
   line-height: $nav_bar_height;
 }
 
-.nav-bar-links {
+.links {
   float: left;
 }
 
-.nav-bar-links__list {
+.linkList {
   padding: 0;
   margin: 0;
   list-style: none;

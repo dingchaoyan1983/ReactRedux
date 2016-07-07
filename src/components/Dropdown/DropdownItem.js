@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import css from './drop-down-item.scss';
 
 export class DropdownItem extends React.Component {
 
@@ -7,7 +8,7 @@ export class DropdownItem extends React.Component {
     let {option, selected, onSelect} = this.props;
 
     return (
-      <div className={classnames('select-option', selected === option.key ? 'active':'')} onClick={onSelect}>
+      <div className={classnames(css.selectOption, selected === option.key ? css.active : '')} onClick={onSelect}>
         <a>{option.value}</a>
       </div>
     )

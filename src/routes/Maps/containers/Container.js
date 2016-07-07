@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import classnames from 'classnames';
 import { fetchMapData } from '../modules/reducer';
 import _get from 'lodash/object/get';
+import css from './maps.scss';
 
 import GoogleMap from 'components/GoogleMap';
 import Mapsliderbar from 'components/Maps/Mapsliderbar';
@@ -27,10 +28,10 @@ export default class Maps extends React.Component {
     let isLoading = _get(this.props, 'maps.meta.isLoading');
 
     return (
-      <div className={classnames('map_container', isLoading ? 'loading-overlay' : '')}>
+      <div className={classnames(css.container, isLoading ? 'loading-overlay' : '')}>
         <GoogleMap ref="googleMap" {...this.props}>
           <Mapsliderbar>
-            <header className="map-layers">
+            <header className={css.layers}>
               <MapTypeSelector {...this.props}/>
             </header>
           </Mapsliderbar>

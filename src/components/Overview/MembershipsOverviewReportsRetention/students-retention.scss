@@ -1,0 +1,6 @@
+@import '../Snapshot/snapshot.scss';
+
+.content{
+  @extend .row;
+  min-height: 300px;
+}

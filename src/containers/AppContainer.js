@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import { Router } from 'react-router'
 import { Provider } from 'react-redux';
-import 'styles/app.css';
 import dropdownManager from 'components/Dropdown/DropdownManager';
+import 'styles/app.scss';
 
 class AppContainer extends React.Component {
   static propTypes = {

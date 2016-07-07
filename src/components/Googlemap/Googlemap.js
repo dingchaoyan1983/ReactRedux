@@ -8,6 +8,7 @@ import dot from './map-red-dot.svg';
 import dot2 from './map-red-dot-2.svg';
 import dot3 from './map-red-dot-3.svg';
 import dot4 from './map-red-dot-4.svg';
+import css from './google-map.scss';
 
 
 const memberOptions = {
@@ -49,8 +50,8 @@ export class Googlemap extends React.Component {
 
   render () {
     return (
-      <div className="google-map_container">
-        <div className="google-map" ref="googleMapRoot"></div>
+      <div className={css.container}>
+        <div className={css.googleMap} ref="googleMapRoot"></div>
         {this.props.children}
       </div>
     )

@@ -231,15 +231,15 @@ webpackConfig.postcss = [
     add: true,
     remove: true,
     browsers: ['last 2 versions']
-  }),
-  require('postcss-easy-import')({
-    prefix: '_'
-  }),
-  require('postcss-mixins'),
-  require('postcss-discard-comments'),
-  require('postcss-simple-vars'),
-  require('postcss-nested'),
-  require('postcss-extend')
+  })
+  // require('postcss-easy-import')({
+  //   prefix: '_'
+  // }),
+  // require('postcss-mixins'),
+  // require('postcss-discard-comments'),
+  // require('postcss-simple-vars'),
+  // require('postcss-nested'),
+  // require('postcss-extend')
 ]
 
 // File loaders
