@@ -1,4 +1,8 @@
-.dropdown-trigger {
+@import 'src/styles/utils/colors';
+@import 'src/styles/utils/mixins';
+@import 'src/styles/base/icon-fonts';
+
+.trigger {
     display: inline-block;
     padding: 10px 25px;
     color: $color_rolling-stone;
@@ -9,7 +13,7 @@
     border-radius: 25px;
 }
 
-.dropdown-trigger__title {
+.title {
   margin: 0;
 
   &::after {
@@ -18,7 +22,7 @@
     vertical-align: middle;
   }
 
-  &.dropdown-trigger__title--expanded {
+  &.expanded {
     &::after {
       content: '\e64c';
     }

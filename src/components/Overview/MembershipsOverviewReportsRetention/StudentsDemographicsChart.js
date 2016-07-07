@@ -131,7 +131,7 @@ export class StudentsDemographicsChart extends React.Component {
       .attr('height', d => canvasHeight - yScale(d.female / 100));
 
     enteredBarWrapper.append('rect')
-      .attr('class', css.maleTranslateX)
+      .attr('class', css.male)
       .attr('width', barWidth)
       .attr('transform', () => `translate(${maleTranslateX}, ${yScale(0)})`)
       .attr('height', () => canvasHeight - yScale(0))

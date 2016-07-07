@@ -1,28 +1,30 @@
+@import 'src/styles/utils/colors';
+
 .snapshot {
   min-height: 370px;
 }
 
-.acl_row {
+.row {
   padding: 1rem 3rem 2rem;
 }
 
-.row__blue {
-  @extend .acl_row;
+.rowBlue {
+  composes: row;
   color: $color_black;
   background-color: $color_light-lavender;
 }
 
-.row__title {
+.rowTitle {
   display: inline-block;
 }
 
-.stat__row {
+.statRow {
   display: flex;
   justify-content: flex-start;
   margin: 1.2rem 0 1.5rem;
 }
 
-.snapshot-row__timeframe {
+.timeframe {
   float: right;
   margin-top: 0.8rem;
 }

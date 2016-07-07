@@ -1,18 +1,19 @@
 import React from 'react';
 import classnames from 'classnames';
+import css from './stat-card.scss';
 
 export class StatCard extends React.Component {
   render () {
     const {name, value, change, total, goal} = this.props;
     return (
-      <div className={classnames('stat__card')}>
-        <div className={classnames('all-caps', 'title')}>{ name }</div>
-        <div className={classnames('primary_stat')}>{value}</div>
-        <div className={classnames('secondary_stat')}>{change}</div>
-        <div className={classnames('stat-card__primary-text')}>
+      <div className={classnames(css.statCard)}>
+        <div className={classnames('all-caps', css.title)}>{ name }</div>
+        <div className={classnames(css.primaryStat)}>{value}</div>
+        <div className={classnames(css.secondaryStat)}>{change}</div>
+        <div className={classnames(css.primaryText)}>
           <span>Total {name}:</span> {total}
         </div>
-        <div className={classnames('stat-card__secondary-text')}>Goal: {goal}</div>
+        <div className={classnames(css.secondaryText)}>Goal: {goal}</div>
       </div>
     )
   }

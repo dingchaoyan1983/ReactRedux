@@ -1,5 +1,8 @@
-$title_bar_height: 75px;
-.title-bar {
+@import 'src/styles/utils/colors';
+@import 'src/styles/utils/mixins';
+@import 'src/styles/variables/title-bar';
+
+.container {
   width: 100%;
   height: $title_bar_height;
   text-align: center;
@@ -12,8 +15,8 @@ $title_bar_height: 75px;
   float: right;
 }
 
-.title-text {
-  @mixin font__proxima-nova-light;
+.text {
+  @include font__proxima-nova-light;
   margin: 0;
   font-size: 1.65rem;
   line-height: 77px;

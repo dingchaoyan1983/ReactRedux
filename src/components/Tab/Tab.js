@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import css from './tab.scss'
 
 export class Tab extends React.Component {
   constructor(props, context) {
@@ -31,8 +32,8 @@ export class Tab extends React.Component {
 
     contentComponent = contentComponent || 'div';
     const children = tabs.map(function({name}, index) {
-      return <li className={classnames('tabs__list__item')} key={index} onClick={this.onSelect.bind(this, name)}>
-                <a className={classnames('tabs__title', selected === name ? 'tabs__title--active' : '')}>
+      return <li className={classnames(css.item)} key={index} onClick={this.onSelect.bind(this, name)}>
+                <a className={classnames(css.title, selected === name ? css.active : '')}>
                   {name}
                 </a>
              </li>
@@ -40,7 +41,7 @@ export class Tab extends React.Component {
 
     return (
       <div>
-        <ul className={classnames('tabs__list')}>
+        <ul className={classnames(css.list)}>
           {children}
         </ul>
         <div>

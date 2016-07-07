@@ -1,4 +1,8 @@
-.select-option {
+@import 'src/styles/utils/colors';
+@import 'src/styles/utils/mixins';
+@import 'src/styles/base/icon-fonts';
+
+.selectOption {
   line-height: 1.75rem;
   color: $color_picton-blue;
   text-decoration: none;
@@ -24,13 +28,12 @@
     line-height: 1.5;
     color: $color_white;
   }
-}
 
+  &:hover {
+    background-color: $color_picton-blue;
 
-.select-option:hover {
-  background-color: $color_picton-blue;
-
-  a {
-    color: $color_white;
+    a {
+      color: $color_white;
+    }
   }
 }

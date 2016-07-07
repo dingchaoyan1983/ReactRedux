@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import css from './map-slider-bar.scss';
 
 export class Mapsliderbar extends React.Component {
   constructor(props, context) {
@@ -15,8 +16,8 @@ export class Mapsliderbar extends React.Component {
     let { expanded } = this.state;
 
     return (
-      <div className={classnames('map-controls', expanded ? 'expanded' : '')}>
-        <button className={classnames('map-controls--toggler', expanded ? 'expanded' : '')} onClick = {this.toggle}>
+      <div className={classnames(css.mapControls, expanded ? css.expanded : '')}>
+        <button className={classnames(css.toggler, expanded ? css.togglerExpanded : '')} onClick = {this.toggle}>
           <span className={classnames(expanded ? 'icon-left-double-arrow' : 'icon-menu')}></span>
         </button>
         {this.props.children}

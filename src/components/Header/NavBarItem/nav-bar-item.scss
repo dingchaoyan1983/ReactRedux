@@ -1,8 +1,10 @@
-.nav-bar-item-container {
+@import 'src/styles/utils/colors.scss';
+
+.container {
   display: inline;
 }
 
-.nav-bar-item {
+.item {
   display: inline-block;
   padding: 0 30px;
   font-size: 0.9rem;
@@ -11,6 +13,6 @@
   text-decoration: none;
 }
 
-.nav-bar-item-acitve {
+.acitve {
   color: $color_picton-blue;
 }

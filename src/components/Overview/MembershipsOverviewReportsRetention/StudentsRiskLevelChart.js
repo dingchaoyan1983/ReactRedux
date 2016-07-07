@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import RingChart from 'components/RingChart';
 import StudentsDemographicsChart from './StudentsDemographicsChart';
 import _get from 'lodash/object/get';
+import css from './students-risk-level-chart.scss';
 
 const RING_COLOR = {
   'low-risk': {
@@ -67,9 +68,9 @@ class StudentsRiskLevelChart extends React.Component {
       };
       const selected = item.name === this.state.selected;
 
-      return <div key={item.name} className={classnames('overview-retention-chart__item', selected ? 'selected' : '' )} onClick={this.onSelect.bind(this, item.name)}>
+      return <div key={item.name} className={classnames(css.chartItem, selected ? css.selected : '' )} onClick={this.onSelect.bind(this, item.name)}>
               <RingChart radius="70" ringWidth="8" percent={item['risk-percentage'] / 100} {...RING_COLOR[item.name]}/>
-              <h2 className="overview-retention-chart__item__title" style={divStyle}>
+              <h2 className={css.chartItemTitle} style={divStyle}>
                 <strong>{RISK_NAME_MAPPING[item.name]}</strong>
               </h2>
               <h2>
@@ -86,10 +87,10 @@ class StudentsRiskLevelChart extends React.Component {
         <div>
           Over the next <strong>days</strong>, forecast <strong>students will drop-out</strong>
         </div>
-        <div className="overview-retention-chart">
+        <div className={css.chart}>
           {riskLevelsChart}
         </div>
-        <div className="overview-retention-chart__content">
+        <div className={css.chartContent}>
           <StudentsDemographicsChart dataSet={_get(this.selectedRiskLevel, 'demographics')}/>
         </div>
       </div>
