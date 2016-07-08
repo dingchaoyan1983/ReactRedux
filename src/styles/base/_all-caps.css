@@ -1,5 +1,5 @@
 .all-caps {
-  @include font__proxima-nova-semibold;
+  @mixin font__proxima-nova-semibold;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import css from './drop-down-trigger.scss';
+import css from './drop-down-trigger.css';
 
 export class DropdownTrigger extends React.Component {
   render () {

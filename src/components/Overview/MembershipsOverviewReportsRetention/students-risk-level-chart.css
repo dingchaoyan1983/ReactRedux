@@ -1,8 +1,8 @@
-@import 'src/styles/utils/mixins';
-@import 'src/styles/utils/colors';
+@import '../../../styles/utils/mixins';
+@import '../../../styles/utils/colors';
 
 .chart {
-  @include flex-row;
+  @mixin flex-row;
   margin-top: 30px;
 }
 

@@ -1,4 +1,4 @@
-@import 'src/styles/utils/colors.scss';
+@import '../../../styles/utils/colors';
 
 .container {
   display: inline;

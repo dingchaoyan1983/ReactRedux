@@ -3,7 +3,7 @@ import DropdownTrigger from './DropdownTrigger';
 import DropdownList from './DropdownList';
 import DropdownItem from './DropdownItem';
 import dropdownManager from './DropdownManager';
-import css from './drop-down.scss';
+import css from './drop-down.css';
 
 export class Dropdown extends React.Component {
   constructor(props, context) {

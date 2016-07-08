@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import css from './stat-card.scss';
+import css from './stat-card.css';
 
 export class StatCard extends React.Component {
   render () {

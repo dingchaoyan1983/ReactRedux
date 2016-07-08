@@ -3,7 +3,7 @@ import StudentsRiskLevelChart from './StudentsRiskLevelChart';
 import classnames from 'classnames';
 import Dropdown from 'components/Dropdown';
 import _get from 'lodash/object/get';
-import css from './students-retention.scss';
+import css from './students-retention.css';
 
 export class MembershipsOverviewReportsRetention extends React.Component {
   constructor(props, context) {

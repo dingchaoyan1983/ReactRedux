@@ -1,5 +1,5 @@
-@import 'src/styles/utils/mixins';
-@import 'src/styles/utils/colors';
+@import '../../../styles/utils/mixins';
+@import '../../../styles/utils/colors';
 
 .container {
   height: 350px;
@@ -16,7 +16,7 @@
     }
 
     text {
-      @include font__proxima-nova-light;
+      @mixin font__proxima-nova-light;
       fill: $color_shadow-grey;
       stroke: $color_shadow-grey;
       shape-rendering: crispEdges;

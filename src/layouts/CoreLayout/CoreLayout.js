@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from 'components/Header'
 import classnames from 'classnames';
-import css from './core-layout.scss';
+import css from './core-layout.css';
 
 export const CoreLayout = ({ children }) => (
   <div className={classnames(css.application)}>

@@ -1,6 +1,6 @@
-@import 'src/styles/utils/colors';
-@import 'src/styles/utils/mixins';
-@import 'src/styles/base/icon-fonts';
+@import '../../styles/utils/colors';
+@import '../../styles/utils/mixins';
+@import '../../styles/base/icon-fonts';
 
 .selectOption {
   line-height: 1.75rem;

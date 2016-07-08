@@ -231,8 +231,9 @@ webpackConfig.postcss = [
     add: true,
     remove: true,
     browsers: ['last 2 versions']
-  })
-  // require('postcss-easy-import')({
+  }),
+  require('precss')
+  // require('postcss-partial-import')({
   //   prefix: '_'
   // }),
   // require('postcss-mixins'),

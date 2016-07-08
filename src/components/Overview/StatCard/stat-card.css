@@ -1,5 +1,5 @@
-@import 'src/styles/utils/colors';
-@import 'src/styles/utils/mixins';
+@import '../../../styles/utils/colors';
+@import '../../../styles/utils/mixins';
 
 .statCard {
   flex: 1;
@@ -30,7 +30,7 @@
 }
 
 .primaryStat {
-  @include font__proxima-nova-thin ;
+  @mixin font__proxima-nova-thin ;
   font-size: 2.5em;
 }
 
@@ -59,7 +59,7 @@
 
 
 .primaryText {
-  @include font__proxima-nova-semibold;
+  @mixin font__proxima-nova-semibold;
   margin-top: 1em;
   font-size: 0.9rem;
 }

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import * as d3 from 'd3';
 import _debounce from 'lodash/function/debounce';
-import css from './students-demographics-chart.scss';
+import css from './students-demographics-chart.css';
 
 export class StudentsDemographicsChart extends React.Component {
   constructor(props, context) {

@@ -1,7 +1,9 @@
-.icn-font {
-  @include font__icon;
-  display: inline-block;
-  line-height: 1;
+@at-root{
+  @define-extend .icn-font {
+    @mixin font__icon;
+    display: inline-block;
+    line-height: 1;
+  }
 }
 
 .icon-save:before {

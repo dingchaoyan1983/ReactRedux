@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import css from './map-slider-bar.scss';
+import css from './map-slider-bar.css';
 
 export class Mapsliderbar extends React.Component {
   constructor(props, context) {

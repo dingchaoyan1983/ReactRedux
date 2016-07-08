@@ -1,10 +1,10 @@
-@import 'src/styles/utils/mixins';
-@import 'src/styles/utils/colors';
-@import 'src/styles/variables/nav-bar';
-@import 'src/styles/variables/title-bar';
+@import '../../../styles/utils/mixins';
+@import '../../../styles/utils/colors';
+@import '../../../styles/variables/nav-bar';
+@import '../../../styles/variables/title-bar';
 
 .container {
-  height: calc(100vh - #{$nav_bar_height} - #{$title_bar_height});
+  height: calc(100vh - $nav_bar_height - $title_bar_height);
   position: relative;
 }
 

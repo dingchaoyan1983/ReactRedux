@@ -1,4 +1,4 @@
-@import 'src/styles/utils/colors';
+@import '../../styles/utils/colors';
 
 .expandedContent {
   position: absolute;

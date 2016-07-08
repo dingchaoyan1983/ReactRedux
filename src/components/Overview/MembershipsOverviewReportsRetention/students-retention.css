@@ -1,4 +1,4 @@
-@import '../Snapshot/snapshot.scss';
+@import '../Snapshot/snapshot.css';
 
 .content{
   @extend .row;

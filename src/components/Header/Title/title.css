@@ -1,6 +1,6 @@
-@import 'src/styles/utils/colors';
-@import 'src/styles/utils/mixins';
-@import 'src/styles/variables/title-bar';
+@import '../../../styles/utils/colors';
+@import '../../../styles/utils/mixins';
+@import '../../../styles/variables/title-bar';
 
 .container {
   width: 100%;
@@ -16,7 +16,7 @@
 }
 
 .text {
-  @include font__proxima-nova-light;
+  @mixin font__proxima-nova-light;
   margin: 0;
   font-size: 1.65rem;
   line-height: 77px;

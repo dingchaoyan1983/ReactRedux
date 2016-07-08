@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import RingChart from 'components/RingChart';
 import StudentsDemographicsChart from './StudentsDemographicsChart';
 import _get from 'lodash/object/get';
-import css from './students-risk-level-chart.scss';
+import css from './students-risk-level-chart.css';
 
 const RING_COLOR = {
   'low-risk': {

@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import Dropdown from 'components/Dropdown';
 import _get from 'lodash/object/get';
-import css from './snapshot.scss';
+import css from './snapshot.css';
 
 export class Snapshot extends React.Component {
   constructor(props, context) {

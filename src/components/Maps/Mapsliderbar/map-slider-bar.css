@@ -1,8 +1,8 @@
-@import 'src/styles/utils/colors';
-@import 'src/styles/utils/mixins';
+@import '../../../styles/utils/colors';
+@import '../../../styles/utils/mixins';
 
 .mapControls {
-  @include font__proxima-nova-regular;
+  @mixin font__proxima-nova-regular;
   position: absolute;
   top: 30px;
   left: -290px;
@@ -19,7 +19,7 @@
 }
 
 .toggler {
-  @include font__proxima-nova-thin;
+  @mixin font__proxima-nova-thin;
   position: absolute;
   top: 10px;
   left: calc(260px + 30px + 30px);

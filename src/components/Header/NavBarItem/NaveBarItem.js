@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import {Link} from 'react-router';
 import classnames from 'classnames';
-import css from './nav-bar-item.scss';
+import css from './nav-bar-item.css';
 
 export class NaveBarItem extends React.Component {
   static contextTypes = {

@@ -1,5 +1,5 @@
-@import 'src/styles/utils/colors';
-@import 'src/styles/utils/mixins';
+@import '../../styles/utils/colors';
+@import '../../styles/utils/mixins';
 
 .list {
   display: flex;
@@ -19,7 +19,7 @@
 }
 
 .title {
-  @include font__proxima-nova-semibold;
+  @mixin font__proxima-nova-semibold;
   display: block;
   padding: 1em;
   font-size: 0.8rem;

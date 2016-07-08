@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import classnames from 'classnames';
 import { fetchMapData } from '../modules/reducer';
 import _get from 'lodash/object/get';
-import css from './maps.scss';
+import css from './maps.css';
 
 import GoogleMap from 'components/GoogleMap';
 import Mapsliderbar from 'components/Maps/Mapsliderbar';

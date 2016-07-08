@@ -1,0 +1,7 @@
+@import '../../styles/utils/mixins';
+
+.container {
+  @mixin font__proxima-nova-light;
+  position: relative;
+  display: inline-block;
+}

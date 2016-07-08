@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import css from './tab.scss'
+import css from './tab.css'
 
 export class Tab extends React.Component {
   constructor(props, context) {

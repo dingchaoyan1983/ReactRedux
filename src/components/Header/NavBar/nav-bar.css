@@ -1,6 +1,6 @@
-@import 'src/styles/utils/colors';
-@import 'src/styles/utils/mixins';
-@import 'src/styles/variables/nav-bar';
+@import '../../../styles/utils/colors';
+@import '../../../styles/utils/mixins';
+@import '../../../styles/variables/nav-bar';
 
 .container {
   height: $nav_bar_height;
@@ -27,7 +27,7 @@
 }
 
 .name {
-  @include font__proxima-nova-semibold;
+  @mixin font__proxima-nova-semibold;
   display: inline-block;
   width: 65%;
   margin: 0;

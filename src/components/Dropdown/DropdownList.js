@@ -1,7 +1,7 @@
 import React from 'react';
 import DropdownItem from './DropdownItem';
 import classnames from 'classnames';
-import css from './drop-down-list.scss';
+import css from './drop-down-list.css';
 
 export class DropdownList extends React.Component {
 
