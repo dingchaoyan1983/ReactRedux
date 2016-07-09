@@ -15,12 +15,10 @@ const mapStateToProps = (state) => {
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
+const mapDispatchToProps = {
     fetchOverviewPerformance,
     fetchRiskLevels
-  }, dispatch);
-}
+};
 
 @connect(mapStateToProps, mapDispatchToProps)
 export default class Overview extends React.Component {

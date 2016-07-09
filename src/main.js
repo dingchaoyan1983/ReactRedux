@@ -26,6 +26,8 @@ const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: (state) => state.router
 })
 
+//run sagaMiddleware
+
 // ========================================================
 // Developer Tools Setup
 // ========================================================

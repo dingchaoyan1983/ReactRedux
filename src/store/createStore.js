@@ -3,13 +3,17 @@ import { routerMiddleware } from 'react-router-redux'
 import thunk from 'redux-thunk'
 import makeRootReducer from './reducers'
 import reduxPromise from 'redux-promise';
+import sagaMiddlewareFactory from 'redux-saga';
 import callApi from 'middlewares/api-call-middleware';
 
 export default (initialState = {}, history) => {
   // ======================================================
   // Middleware Configuration
   // ======================================================
-  const middleware = [callApi, reduxPromise, thunk, routerMiddleware(history)]
+
+  const sagaMiddleware = sagaMiddlewareFactory();
+
+  const middleware = [sagaMiddleware, callApi, reduxPromise, thunk, routerMiddleware(history)]
 
   // ======================================================
   // Store Enhancers
@@ -34,6 +38,7 @@ export default (initialState = {}, history) => {
     )
   )
   store.asyncReducers = {}
+  store.runSaga = sagaMiddleware.run;
 
   if (module.hot) {
     module.hot.accept('./reducers', () => {

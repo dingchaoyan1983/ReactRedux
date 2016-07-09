@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux';
 import classnames from 'classnames';
 import { fetchMapData } from '../modules/reducer';
 import _get from 'lodash/object/get';
@@ -16,10 +15,9 @@ const mapStateToProps = (state) => {
     maps: state.maps
   }
 }
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    fetchMapData
-  }, dispatch)
+
+const mapDispatchToProps = {
+  fetchMapData
 }
 
 @connect(mapStateToProps, mapDispatchToProps)
