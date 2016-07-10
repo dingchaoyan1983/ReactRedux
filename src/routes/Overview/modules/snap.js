@@ -3,6 +3,7 @@ import {CALL_API} from 'middlewares/api-call-middleware';
 
 // Constants
 // export const constants = { }
+export const REQUEST = Symbol();
 export const REQUEST_STARTED = Symbol(); //'SNAP_REQUEST_STARTED';
 export const REQUEST_COMPELTED = Symbol(); //'SNAP_REQUEST_COMPELTED';
 export const REQUEST_FAILED = Symbol(); //'SNAP_REQUEST_FAILED';
@@ -10,12 +11,9 @@ export const REQUEST_FAILED = Symbol(); //'SNAP_REQUEST_FAILED';
 // export actions
 export function fetchOverviewPerformance(timeframe) {
   return {
-    type: REQUEST_STARTED,
-    timeframe,
-    meta: {
-      isLoading: true
-    }
-
+    type: REQUEST,
+    timeframe
+    //This is the old manner, use redux-thunk to get the data from api
     // [CALL_API]: {
     //   types:{
     //     REQUEST_STARTED: REQUEST_STARTED,
@@ -32,6 +30,8 @@ export function fetchOverviewPerformance(timeframe) {
 export const initialState = {}
 export default function (state = initialState, action) {
   switch (action.type) {
+    case REQUEST:
+      return Object.assign({}, state, action);
     case REQUEST_STARTED:
       return Object.assign({}, state, action);
     case REQUEST_COMPELTED:
