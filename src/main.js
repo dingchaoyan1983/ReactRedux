@@ -7,10 +7,6 @@ import createStore from './store/createStore'
 import AppContainer from './containers/AppContainer';
 import { watchFetchSnapData } from './sagas';
 
-import { effects } from 'redux-saga';
-
-const { call } = effects;
-
 // ========================================================
 // Browser History Setup
 // ========================================================
