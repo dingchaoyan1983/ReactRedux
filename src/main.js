@@ -4,7 +4,12 @@ import createBrowserHistory from 'history/lib/createBrowserHistory'
 import { useRouterHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 import createStore from './store/createStore'
-import AppContainer from './containers/AppContainer'
+import AppContainer from './containers/AppContainer';
+import { watchFetchSnapData } from './sagas';
+
+import { effects } from 'redux-saga';
+
+const { call } = effects;
 
 // ========================================================
 // Browser History Setup
@@ -22,6 +27,9 @@ const browserHistory = useRouterHistory(createBrowserHistory)({
 // react-router-redux of its location.
 const initialState = window.___INITIAL_STATE__
 const store = createStore(initialState, browserHistory)
+
+store.runSaga(watchFetchSnapData);
+
 const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: (state) => state.router
 })
