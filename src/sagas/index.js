@@ -28,50 +28,61 @@ const { take, call, put, fork } = effects;
 function *watchFetchSnapData() {
   while(true) {
     const { timeframe } = yield take(SNAP_REQUEST);
-    yield put(startRequest(SNAP_REQUEST_STARTED))
-    try {
-      const data = yield call(fetch, '/api/friendships/reports/overview', {time_frame: timeframe});
-      yield put(outputCorrect(SNAP_REQUEST_COMPELTED, data));
-    } catch(err) {
-      yield put(outputError(SNAP_REQUEST_FAILED, err));
-    }
+    yield fork(loadSnapData, timeframe);
+  }
+}
+
+function *loadSnapData(timeframe) {
+  yield put(startRequest(SNAP_REQUEST_STARTED))
+  try {
+    const data = yield call(fetch, '/api/friendships/reports/overview', {time_frame: timeframe});
+    yield put(outputCorrect(SNAP_REQUEST_COMPELTED, data));
+  } catch(err) {
+    yield put(outputError(SNAP_REQUEST_FAILED, err));
   }
 }
 
 function *watchFetchRiskLevelData() {
   while(true) {
     const {timeframe} = yield take(RISKLEVEL_REQUEST);
-    yield put(startRequest(RISKLEVEL_REQUEST_STARTED));
-    try {
-      const data = yield call(fetch, '/api/friendships/reports/dropout', {time_frame: timeframe});
-      yield put(outputCorrect(RISKLEVEL_REQUEST_FAILED, data));
-    } catch(err) {
-      yield put(outputError(RISKLEVEL_REQUEST_FAILED, err));
-    }
+    yield fork(loadRiskLevelData, timeframe);
+  }
+}
+
+function *loadRiskLevelData(timeframe) {
+  yield put(startRequest(RISKLEVEL_REQUEST_STARTED));
+  try {
+    const data = yield call(fetch, '/api/friendships/reports/dropout', {time_frame: timeframe});
+    yield put(outputCorrect(RISKLEVEL_REQUEST_FAILED, data));
+  } catch(err) {
+    yield put(outputError(RISKLEVEL_REQUEST_FAILED, err));
   }
 }
 
 function *watchFetchReneralMapData() {
   while(true) {
     const { mapType } = yield take(MAP_REQUEST);
-    yield put(startRequest(MAP_REQUEST_STARTED));
+    yield fork(loadRenaralMapData, mapType);
+  }
+}
 
-    try {
-      const [branches, members] = yield [
-        call(fetch, '/api/friendships/maps/branches'),
-        call(fetch, '/api/friendships/maps/members')
-      ];
+function *loadRenaralMapData(mapType) {
+  yield put(startRequest(MAP_REQUEST_STARTED));
+  try {
+    const [branches, members] = yield [
+      call(fetch, '/api/friendships/maps/branches'),
+      call(fetch, '/api/friendships/maps/members')
+    ];
 
 
-      const payload = {
-        branches: _get(branches, 'data.attributes.map_points'),
-        members: _get(members, 'data.attributes.map_points')
-      };
+    const payload = {
+      branches: _get(branches, 'data.attributes.map_points'),
+      members: _get(members, 'data.attributes.map_points')
+    };
 
-      yield put(outputCorrect(MAP_REQUEST_FAILED, payload));
-    } catch(err) {
-      yield put(outputError(MAP_REQUEST_FAILED, err));
-    }
+    yield put(outputCorrect(MAP_REQUEST_FAILED, payload));
+  } catch(err) {
+    yield put(outputError(MAP_REQUEST_FAILED, err));
   }
 }
 
