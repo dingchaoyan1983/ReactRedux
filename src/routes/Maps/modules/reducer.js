@@ -1,13 +1,15 @@
-import { Promise } from 'es6-promise';
-import $ from 'jquery';
-import _get from 'lodash/object/get';
+import { createAction } from 'redux-actions';
 // Constants
 // export const constants = { }
 
 export const REQUEST = Symbol();
-export const REQUEST_STARTED = Symbol();
-export const REQUEST_COMPELTED = Symbol();
-export const REQUEST_FAILED = Symbol();
+const REQUEST_STARTED = Symbol();
+const REQUEST_COMPELTED = Symbol();
+const REQUEST_FAILED = Symbol();
+
+export const fetchStarted = createAction(REQUEST_STARTED, null, () => ({isLoading: true}));
+export const fetchCompleted = createAction(REQUEST_COMPELTED, null, () => ({isLoading: false}));
+export const fetchFailed = createAction(REQUEST_FAILED, null, () => ({isLoading: false}));
 
 //Action Creators
 export function fetchMapData(mapType) {
@@ -15,7 +17,7 @@ export function fetchMapData(mapType) {
     type: REQUEST,
     mapType
   };
-  
+
   //This is the old manner, use redux-thunk to get the data from api
   // return async (dispatch) => {
   //   let payload = {};
@@ -48,15 +50,11 @@ export function fetchMapData(mapType) {
 // export const actions = { }
 
 // Reducer
-export const initialState = {}
+const initialState = {}
 export default function (state = initialState, action) {
   switch (action.type) {
-    case REQUEST:
-      return Object.assign({}, state, action);
     case REQUEST_STARTED:
-      return Object.assign({}, state, action);
     case REQUEST_COMPELTED:
-      return Object.assign({}, state, action);
     case REQUEST_FAILED:
       return Object.assign({}, state, action)
     default:

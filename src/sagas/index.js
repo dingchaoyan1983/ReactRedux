@@ -2,72 +2,56 @@ import { effects } from 'redux-saga';
 import { fetch } from '../callApi';
 import _get from 'lodash/object/get';
 
-import {
-  REQUEST as SNAP_REQUEST,
-  REQUEST_STARTED as SNAP_REQUEST_STARTED,
-  REQUEST_COMPELTED as SNAP_REQUEST_COMPELTED,
-  REQUEST_FAILED as SNAP_REQUEST_FAILED
-} from '../routes/Overview/modules/snap';
-
-import {
-  REQUEST as RISKLEVEL_REQUEST,
-  REQUEST_STARTED as RISKLEVEL_REQUEST_STARTED,
-  REQUEST_COMPELTED as RISKLEVEL_REQUEST_COMPELTED,
-  REQUEST_FAILED as RISKLEVEL_REQUEST_FAILED
-} from '../routes/Overview/modules/riskLevels';
-
-import {
-  REQUEST as MAP_REQUEST,
-  REQUEST_STARTED as MAP_REQUEST_STARTED,
-  REQUEST_COMPELTED as MAP_REQUEST_COMPELTED,
-  REQUEST_FAILED as MAP_REQUEST_FAILED
-} from '../routes/Maps/modules/reducer';
+import * as snap from '../routes/Overview/modules/snap';
+import * as riskLevels from '../routes/Overview/modules/riskLevels';
+import * as maps from '../routes/Maps/modules/reducer';
 
 const { take, call, put, fork } = effects;
 
 function *watchFetchSnapData() {
   while(true) {
-    const { timeframe } = yield take(SNAP_REQUEST);
+    const { timeframe } = yield take(snap.REQUEST);
     yield fork(loadSnapData, timeframe);
   }
 }
 
 function *loadSnapData(timeframe) {
-  yield put(startRequest(SNAP_REQUEST_STARTED))
+  yield put(snap.fetchStarted());
   try {
     const data = yield call(fetch, '/api/friendships/reports/overview', {time_frame: timeframe});
-    yield put(outputCorrect(SNAP_REQUEST_COMPELTED, data));
+    yield put(snap.fetchCompleted(data));
+
   } catch(err) {
-    yield put(outputError(SNAP_REQUEST_FAILED, err));
+    yield put(snap.fetchFailed(err));
   }
 }
 
 function *watchFetchRiskLevelData() {
   while(true) {
-    const {timeframe} = yield take(RISKLEVEL_REQUEST);
+    const {timeframe} = yield take(riskLevels.REQUEST);
     yield fork(loadRiskLevelData, timeframe);
   }
 }
 
 function *loadRiskLevelData(timeframe) {
-  yield put(startRequest(RISKLEVEL_REQUEST_STARTED));
+  yield put(riskLevels.fetchStarted());
   try {
     const data = yield call(fetch, '/api/friendships/reports/dropout', {time_frame: timeframe});
-    yield put(outputCorrect(RISKLEVEL_REQUEST_FAILED, data));
+    yield put(riskLevels.fetchCompleted(data));
   } catch(err) {
-    yield put(outputError(RISKLEVEL_REQUEST_FAILED, err));
+    yield put(riskLevels.fetchFailed(err));
   }
 }
 
 function *watchFetchReneralMapData() {
   while(true) {
-    const { mapType } = yield take(MAP_REQUEST);
+    const { mapType } = yield take(maps.REQUEST);
     yield fork(loadRenaralMapData, mapType);
   }
 }
 
 function *loadRenaralMapData(mapType) {
-  yield put(startRequest(MAP_REQUEST_STARTED));
+  yield put(maps.fetchStarted());
   try {
     const [branches, members] = yield [
       call(fetch, '/api/friendships/maps/branches'),
@@ -80,9 +64,9 @@ function *loadRenaralMapData(mapType) {
       members: _get(members, 'data.attributes.map_points')
     };
 
-    yield put(outputCorrect(MAP_REQUEST_FAILED, payload));
+    yield put(maps.fetchCompleted(payload))
   } catch(err) {
-    yield put(outputError(MAP_REQUEST_FAILED, err));
+    yield put(maps.fetchFailed())
   }
 }
 
@@ -90,35 +74,4 @@ export default function *rootSaga() {
   yield fork(watchFetchSnapData);
   yield fork(watchFetchRiskLevelData);
   yield fork(watchFetchReneralMapData);
-}
-
-
-function startRequest(type) {
-  return {
-    type,
-    meta: {
-      isLoading: true
-    }
-  }
-}
-
-function outputError(type, error) {
-  return {
-    type,
-    meta: {
-      isLoading: false,
-      error: true,
-      errDesc: error
-    }
-  }
-}
-
-function outputCorrect(type, data) {
-  return {
-    type,
-    payload: data,
-    meta: {
-      isLoading: false
-    }
-  }
 }

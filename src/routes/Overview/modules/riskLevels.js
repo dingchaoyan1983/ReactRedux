@@ -1,12 +1,15 @@
-import {CALL_API} from 'middlewares/api-call-middleware';
+import  { createAction } from 'redux-actions';
 
 // Constants
 // export const constants = { }
 export const REQUEST = Symbol();
-export const REQUEST_STARTED = Symbol();
-export const REQUEST_COMPELTED = Symbol();
-export const REQUEST_FAILED = Symbol();
+const REQUEST_STARTED = Symbol();
+const REQUEST_COMPELTED = Symbol();
+const REQUEST_FAILED = Symbol();
 
+export const fetchStarted = createAction(REQUEST_STARTED, null, () => ({isLoading: true}));
+export const fetchCompleted = createAction(REQUEST_COMPELTED, null, () => ({isLoading: false}));
+export const fetchFailed = createAction(REQUEST_FAILED, null, () => ({isLoading: false}));
 
 // Action Creators
 // export const actions = { }
@@ -15,7 +18,7 @@ export function fetchRiskLevels(timeframe) {
     type: REQUEST,
     timeframe
   }
-  
+
   //This is the old manner, use redux-thunk to get the data from api
   // return {
   //   [CALL_API]: {
@@ -31,15 +34,11 @@ export function fetchRiskLevels(timeframe) {
 }
 
 // Reducer
-export const initialState = {}
+const initialState = {}
 export default function (state = initialState, action) {
   switch (action.type) {
-    case REQUEST:
-      return Object.assign({}, state, action);
     case REQUEST_STARTED:
-      return Object.assign({}, state, action);
     case REQUEST_COMPELTED:
-      return Object.assign({}, state, action);
     case REQUEST_FAILED:
       return Object.assign({}, state, action);
     default:

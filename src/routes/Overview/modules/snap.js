@@ -1,12 +1,11 @@
-import $ from 'jquery';
-import {CALL_API} from 'middlewares/api-call-middleware';
+import  { createAction } from 'redux-actions';
 
 // Constants
 // export const constants = { }
 export const REQUEST = Symbol();
-export const REQUEST_STARTED = Symbol(); //'SNAP_REQUEST_STARTED';
-export const REQUEST_COMPELTED = Symbol(); //'SNAP_REQUEST_COMPELTED';
-export const REQUEST_FAILED = Symbol(); //'SNAP_REQUEST_FAILED';
+const REQUEST_STARTED = Symbol(); //'SNAP_REQUEST_STARTED';
+const REQUEST_COMPELTED = Symbol(); //'SNAP_REQUEST_COMPELTED';
+const REQUEST_FAILED = Symbol(); //'SNAP_REQUEST_FAILED';
 
 // export actions
 export function fetchOverviewPerformance(timeframe) {
@@ -26,16 +25,16 @@ export function fetchOverviewPerformance(timeframe) {
   }
 }
 
+export const fetchStarted = createAction(REQUEST_STARTED, null, () => ({isLoading: true}));
+export const fetchCompleted = createAction(REQUEST_COMPELTED, null, () => ({isLoading: false}));
+export const fetchFailed = createAction(REQUEST_FAILED, null, () => ({isLoading: false}));
+
 // Reducer
-export const initialState = {}
+const initialState = {}
 export default function (state = initialState, action) {
   switch (action.type) {
-    case REQUEST:
-      return Object.assign({}, state, action);
     case REQUEST_STARTED:
-      return Object.assign({}, state, action);
     case REQUEST_COMPELTED:
-      return Object.assign({}, state, action);
     case REQUEST_FAILED:
       return Object.assign({}, state, action);
     default:
