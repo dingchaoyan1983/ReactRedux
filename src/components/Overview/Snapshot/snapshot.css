@@ -16,6 +16,8 @@
 
 .rowTitle {
   display: inline-block;
+  font-size: 24px;
+  margin: 20px 0;
 }
 
 .statRow {

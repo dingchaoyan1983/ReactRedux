@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import StudentsList from 'components/StudentsList';
 
 export class People extends React.Component {
   render () {
     return (
-      <div>Students page</div>
+      <StudentsList/>
     )
   }
 }

@@ -16,8 +16,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = {
-  fetchMapData
+const mapDispatchToProps = () => {
+  return {
+    fetchMapData
+  }
 }
 
 @connect(mapStateToProps, mapDispatchToProps)
