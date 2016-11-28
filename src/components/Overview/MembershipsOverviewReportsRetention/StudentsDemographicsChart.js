@@ -5,7 +5,7 @@ import * as d3 from 'd3';
 import _debounce from 'lodash/function/debounce';
 import css from './students-demographics-chart.css';
 
-export class StudentsDemographicsChart extends React.Component {
+class StudentsDemographicsChart extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.xScale = d3.scaleBand();

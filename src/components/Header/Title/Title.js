@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import css from './title.css';
 
-export class Title extends React.Component {
+class Title extends React.Component {
   render () {
     let { title } = this.props;
 

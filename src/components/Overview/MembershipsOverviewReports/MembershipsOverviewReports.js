@@ -1,11 +1,9 @@
 import React from 'react';
 import Tab from 'components/Tab';
-
 import MembershipsOverviewReportsAcquisition from '../MembershipsOverviewReportsAcquisition';
 import MembershipsOverviewReportsRetention from '../MembershipsOverviewReportsRetention';
 
-
-export class MembershipsOverviewReports extends React.Component {
+class MembershipsOverviewReports extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.tabs = [

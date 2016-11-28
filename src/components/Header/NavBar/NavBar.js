@@ -2,7 +2,7 @@ import React from 'react'
 import classnames from 'classnames';
 import css from './nav-bar.css';
 
-export class NavBar extends React.Component {
+class NavBar extends React.Component {
   render () {
     return (
       <div className={classnames(css.container)}>

@@ -40,8 +40,7 @@ const memberOptions = {
   }]
 };
 
-
-export class Googlemap extends React.Component {
+class Googlemap extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.options = Object.assign({}, GoogleMapConst);

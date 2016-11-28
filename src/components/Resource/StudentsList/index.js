@@ -13,6 +13,11 @@ const columns = [{
 }];
 
 export default class StudentsList extends React.Component {
+  static defaultProps = {
+    dataSource:[],
+    loading: false
+  };
+
   constructor(props, context) {
     super(props, context);
   }
@@ -25,8 +30,3 @@ export default class StudentsList extends React.Component {
     return <Table columns={columns} size="default" {...this.props}/>
   }
 }
-
-StudentsList.defaultProps = {
-  dataSource:[],
-  loading: false
-};

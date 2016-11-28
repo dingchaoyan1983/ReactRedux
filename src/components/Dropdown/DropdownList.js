@@ -3,7 +3,7 @@ import DropdownItem from './DropdownItem';
 import classnames from 'classnames';
 import css from './drop-down-list.css';
 
-export class DropdownList extends React.Component {
+class DropdownList extends React.Component {
 
   render () {
     let {selected, onSelect, options} = this.props;

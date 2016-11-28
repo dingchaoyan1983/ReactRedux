@@ -2,7 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as d3 from 'd3';
 
-export class RingChart extends React.Component {
+class RingChart extends React.Component {
+  static defaultProps = {
+    radius: 50,
+    ringWidth: 10,
+    backgroundColor: '#eee',
+    foregroundColor: '#000',
+    canvasBgColor: '#fff',
+    percent: 0.2
+  };
+
   constructor(props, context) {
     super(props, context);
     this._arcFunc = d3.arc()
@@ -97,14 +106,5 @@ export class RingChart extends React.Component {
       }, 2 * Math.PI * this.props.percent);
   }
 }
-
-RingChart.defaultProps = {
-  radius: 50,
-  ringWidth: 10,
-  backgroundColor: '#eee',
-  foregroundColor: '#000',
-  canvasBgColor: '#fff',
-  percent: 0.2
-};
 
 export default RingChart;

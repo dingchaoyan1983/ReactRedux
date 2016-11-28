@@ -5,7 +5,14 @@ import DropdownItem from './DropdownItem';
 import dropdownManager from './DropdownManager';
 import css from './drop-down.css';
 
-export class Dropdown extends React.Component {
+class Dropdown extends React.Component {
+  static defaultProps = {
+    options: [],
+    initSelected: 0,
+    dropdownTriggerComponent: DropdownTrigger,
+    dropdownOptionComponent: DropdownItem
+  };
+
   constructor(props, context) {
     super(props, context);
     this.state = {expanded: false, selected: props.initSelected};
@@ -59,12 +66,5 @@ export class Dropdown extends React.Component {
     dropdownManager.unregisterDropdown(this);
   }
 }
-
-Dropdown.defaultProps = {
-  options: [],
-  initSelected: 0,
-  dropdownTriggerComponent: DropdownTrigger,
-  dropdownOptionComponent: DropdownItem
-};
 
 export default Dropdown

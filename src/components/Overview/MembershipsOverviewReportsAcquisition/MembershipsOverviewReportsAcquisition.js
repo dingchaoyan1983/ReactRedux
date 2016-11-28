@@ -1,6 +1,6 @@
 import React from 'react'
 
-export class MembershipsOverviewReportsAcquisition extends React.Component {
+class MembershipsOverviewReportsAcquisition extends React.Component {
   constructor(props, context) {
     super(props, context);
 

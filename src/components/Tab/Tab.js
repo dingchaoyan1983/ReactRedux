@@ -2,7 +2,12 @@ import React from 'react';
 import classnames from 'classnames';
 import css from './tab.css'
 
-export class Tab extends React.Component {
+class Tab extends React.Component {
+  static defaultProps = {
+    tabs: [],
+    initSelected: ''
+  };
+
   constructor(props, context) {
     super(props, context);
     let {tabs, initSelected} = props;
@@ -67,19 +72,6 @@ export class Tab extends React.Component {
 
     Object.assign(this.selectedTabObj, obj);
   }
-}
-
-Tab.defaultProps = {
-  tabs: [],
-  initSelected: ''
-}
-
-Tab.contextTypes = {
-
-}
-
-Tab.propTypes = {
-
 }
 
 export default Tab

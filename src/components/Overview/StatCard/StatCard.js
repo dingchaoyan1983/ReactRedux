@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import css from './stat-card.css';
 
-export class StatCard extends React.Component {
+class StatCard extends React.Component {
   render () {
     const {name, value, change, total, goal} = this.props;
     return (

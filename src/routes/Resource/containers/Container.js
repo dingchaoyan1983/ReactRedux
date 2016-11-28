@@ -5,7 +5,7 @@ import StudentsList from 'components/Resource/StudentsList';
 import {fetchStudents} from '../actions';
 import _get from 'lodash/object/get';
 
-export class Resource extends React.Component {
+class Resource extends React.Component {
   render () {
     return (
       <StudentsList {...this.props} loading={_get(this.props.resource.students, 'meta.isLoading')} dataSource={_get(this.props.resource.students, 'payload.data.attributes.data')}/>

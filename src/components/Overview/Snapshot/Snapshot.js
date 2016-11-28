@@ -4,7 +4,7 @@ import Dropdown from 'components/Dropdown';
 import _get from 'lodash/object/get';
 import css from './snapshot.css';
 
-export class Snapshot extends React.Component {
+class Snapshot extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.defaultTimeframe = 30;

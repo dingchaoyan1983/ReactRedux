@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 import NavBarItem from './NavBarItem';
 import Title from './Title';
 
-export class Header extends React.Component {
+class Header extends React.Component {
   render () {
     let { title } = this.props;
     return (

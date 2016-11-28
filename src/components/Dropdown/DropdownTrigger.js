@@ -2,7 +2,12 @@ import React from 'react';
 import classnames from 'classnames';
 import css from './drop-down-trigger.css';
 
-export class DropdownTrigger extends React.Component {
+class DropdownTrigger extends React.Component {
+  static defaultProps = {
+    option: {},
+    expanded: false
+  };
+
   render () {
     let {onClick, option, expanded} = this.props;
     return (
@@ -14,11 +19,5 @@ export class DropdownTrigger extends React.Component {
     )
   }
 }
-
-DropdownTrigger.defaultProps = {
-  option: {},
-  expanded: false
-};
-
 
 export default DropdownTrigger

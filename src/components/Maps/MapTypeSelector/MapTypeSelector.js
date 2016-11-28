@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropdown from 'components/Dropdown';
 
-export class MapTypeSelector extends React.Component {
+class MapTypeSelector extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.options = [

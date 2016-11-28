@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 import classnames from 'classnames';
 import css from './nav-bar-item.css';
 
-export class NaveBarItem extends React.Component {
+class NaveBarItem extends React.Component {
   static contextTypes = {
     store: PropTypes.object
   }

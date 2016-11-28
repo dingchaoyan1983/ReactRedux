@@ -5,7 +5,7 @@ import Dropdown from 'components/Dropdown';
 import _get from 'lodash/object/get';
 import css from './students-retention.css';
 
-export class MembershipsOverviewReportsRetention extends React.Component {
+class MembershipsOverviewReportsRetention extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.onTimeframeSelect = this.onTimeframeSelect.bind(this);
