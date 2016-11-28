@@ -7,8 +7,6 @@ import _get from 'lodash/object/get';
 
 export class Resource extends React.Component {
   render () {
-    console.log(_get(this.props.resource.students, 'payload'));
-
     return (
       <StudentsList {...this.props} loading={_get(this.props.resource.students, 'meta.isLoading')} dataSource={_get(this.props.resource.students, 'payload.data.attributes.data')}/>
     )
