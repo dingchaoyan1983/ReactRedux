@@ -13,7 +13,7 @@ export class Header extends React.Component {
         <Title title={title}/>
         <NavBar>
           <NavBarItem title="Overview" href="/friendships/overview"/>
-          <NavBarItem title="Students" href="/friendships/students"/>
+          <NavBarItem title="Resource" href="/friendships/resource"/>
           <NavBarItem title="Maps" href="/friendships/maps"/>
         </NavBar>
       </div>

@@ -42,6 +42,8 @@ const config = {
     colors : true
   },
   compiler_vendor : [
+    'es5-shim',
+    'es6-shim',
     'history',
     'react',
     'react-redux',

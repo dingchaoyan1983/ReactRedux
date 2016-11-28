@@ -1,7 +1,7 @@
 // We only need to import the modules necessary for initial render
 import CoreLayout from '../layouts/CoreLayout/CoreLayout'
 import OverviewRoute from './Overview';
-import StudentsRoute from './Students';
+import ResourceRoute from './Resource';
 import MapsRoute from './Maps';
 
 
@@ -21,7 +21,7 @@ export const createRoutes = (store) => ({
     component: CoreLayout,
     childRoutes: [
       OverviewRoute(store),
-      StudentsRoute(store),
+      ResourceRoute(store),
       MapsRoute(store)
     ]
   }]
