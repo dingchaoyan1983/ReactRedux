@@ -1,6 +1,5 @@
-export default function loadingStateComposor(REQUEST_STARTED, REQUEST_COMPELTED, REQUEST_FAILED) {
-  return function(defaultState) {
-    return function(state = defaultState, action) {
+export default function loadingStateComposor({REQUEST_STARTED, REQUEST_COMPELTED, REQUEST_FAILED}) {
+    return function(state, action) {
       switch (action.type) {
         case REQUEST_STARTED:
         case REQUEST_COMPELTED:
@@ -10,5 +9,4 @@ export default function loadingStateComposor(REQUEST_STARTED, REQUEST_COMPELTED,
           return state;
       }
     }
-  }
 }
